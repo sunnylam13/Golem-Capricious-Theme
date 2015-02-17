@@ -1,0 +1,46 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+@import 'normalize';
+@import 'grid';
+@import 'responsive';
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+// $basefontfamily:'Lato', sans-serif;
+$basefontfamily:'Open Sans', sans-serif;
+$basefontsize:14px;
+$basebackcolor: darken(white,2.5%);
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+body {
+	font-family: $basefontfamily;
+	font-size: $basefontsize;
+	background: $basebackcolor;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+// for some mysterious reason a dot kept appearing in the header fixed nav menu so I decided to set that global li's would be default list-style-type: none unless specified otherwise.
+li {
+	list-style-type: none;
+}
