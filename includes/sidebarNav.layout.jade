@@ -13,17 +13,55 @@
 	//- ===================================
 
 	block navMenu
-		ul
+		ul.mainMenu
 			li
-				a Home
+				a(href="#") Home
+				ul
+					li
+						a(href="#") Home w/ Carousel
+					li
+						a(href="#") Home w/ Portfolio
+					li
+						a(href="#") Home w/ Testimonials
 			li
-				a Portfolio
+				a(href="#") Portfolio
+				ul
+					li
+						a(href="#") Portfolio 4 Columns
+					li
+						a(href="#") Portfolio 3 Columns
+					li
+						a(href="#") Portfolio 2 Columns
+					li
+						a(href="#") Portfolio 1 Columns
+					li
+						a(href="#") Portfolio Post
 			li
-				a Blog
+				a(href="#") Blog
+				ul
+					li
+						a(href="#") Blog
+					li
+						a(href="#") Blog with Sidebar
+					li
+						a(href="#") Post
+					li
+						a(href="#") Post with Sidebar
 			li
-				a Features
+				a(href="#") Features
+				ul
+					li
+						a(href="#") Button Boxes Images
+					li
+						a(href="#") Tabs Toggles Tables
+					li
+						a(href="#") Testimonials
+					li
+						a(href="#") Typography
+					li
+						a(href="#") Service Icons
 			li
-				a Contact Us
+				a(href="#") Contact Us
 	
 	//- ===================================
 	//- SOCIAL MEDIA BUTTONS
@@ -37,6 +75,11 @@
 			img(src="./images/icon-dribbble.png", alt="Dribble")
 			img(src="./images/icon-linkedin.png", alt="LinkedIn")
 	
+	//- ===================================
+	//- BLOG SEARCH BOX
+	//- ===================================
+	//- This only appears when the blog page comes up.
+
 	block blogSearchBox
 		.blogSearchBox
 			//- This should be hidden with 
