@@ -1,5 +1,5 @@
 block headLine
-	h2 Welcome
+	h1 Welcome
 
 block introText
 	.introText
@@ -7,10 +7,19 @@ block introText
 
 block slideImages
 	.sliderImage
-		img(src="http://lorempixel.com/705/382", alt="Lorem")
-		img(src="http://lorempixel.com/705/382", alt="Lorem")
-		img(src="http://lorempixel.com/705/382", alt="Lorem")
-		img(src="http://lorempixel.com/705/382", alt="Lorem")
+		ul.flexslider
+			li
+				img(src="http://lorempixel.com/161/121", alt="Lorem")
+			li
+				img(src="http://lorempixel.com/161/121", alt="Lorem")
+			li
+				img(src="http://lorempixel.com/161/121", alt="Lorem")
+			li
+				img(src="http://lorempixel.com/161/121", alt="Lorem")
+			li
+				img(src="http://lorempixel.com/161/121", alt="Lorem")
+			li
+				img(src="http://lorempixel.com/161/121", alt="Lorem")
 
 block copyBlockOne
 	.copyBlockOne
@@ -37,16 +46,52 @@ block benefitBlock
 block carouselWork
 	.latestWorks
 		//- This is another image slider gallery
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
-		img(src="http://lorempixel.com/161/121", alt="Lorem")
+		h3 Latest Works
+		.carouselScroll
+			a(href="#",class='prev')
+			a(href="#",class='next')
+		.carouselImages
+			ul
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
+				li
+					a(href="#")
+						span.overlayDetails
+						img(src="http://lorempixel.com/161/121", alt="Lorem")
 
 //- this is only used for index2.jade
 block portfolioWork
