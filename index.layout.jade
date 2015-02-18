@@ -7,6 +7,7 @@ html(lang="en")
 			block titleEntry
 				| Golem Capricious
 	body
+		#fb-root
 		// This theme is inspired by and partly derived from Caprice (http://elemisdesign.com/demos/caprice/index.html)...
 		
 		.wrapper
@@ -18,47 +19,51 @@ html(lang="en")
 			block sidebarNav
 
 			//- ===================================
-			//- SUBHEADING
-			//- ===================================
-
-			//- Turns out this is un-needed as you code the modified introduction on the separate pages differently
-			//- Currently using the class .introText to style all of these sections
-
-			block subHeading
-
-			//- ===================================
 			//- CONTENT HOME
 			//- ===================================
 
-			block contentHome
+			.content
+				block contentHome
+					//- ===================================
+					//- SUBHEADING
+					//- ===================================
 
-			//- ===================================
-			//- CONTENT PORTFOLIO
-			//- ===================================
+					//- Turns out this is un-needed as you code the modified introduction on the separate pages differently
+					//- Currently using the class .introText to style all of these sections
 
-			block contentPortfolio
+					block subHeading
 
-			//- ===================================
-			//- CONTENT BLOG
-			//- ===================================
+					//- ===================================
+					//- CONTENT PORTFOLIO
+					//- ===================================
 
-			block contentBlog
+					block contentPortfolio
 
-			//- ===================================
-			//- CONTENT FEATURES
-			//- ===================================
+					//- ===================================
+					//- CONTENT BLOG
+					//- ===================================
 
-			block contentFeatures
+					block contentBlog
 
-			//- ===================================
-			//- CONTACT US
-			//- ===================================
+					//- ===================================
+					//- CONTENT FEATURES
+					//- ===================================
 
-			block contactUs
+					block contentFeatures
+
+					//- ===================================
+					//- CONTACT US
+					//- ===================================
+
+					block contactUs
 
 			//- ===================================
 			//- FOOTER
 			//- ===================================
 
 			block footer
+
+			
+
+			
 

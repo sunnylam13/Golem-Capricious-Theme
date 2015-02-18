@@ -1,0 +1,18 @@
+extends ./index.layout.jade
+
+block sidebarNav
+	include ./includes/sidebarNavBlog.jade
+
+block contentHome
+	h1 Blog
+	include ./includes/introText.jade
+	.primary
+		//- for these sidebar versions you must re-arrange them to be under a .primary which you will style
+		include ./includes/blogPostTemplate.jade
+		//- include ./includes/pageNavBlog.jade
+		include ./includes/fbFeedbackContent.jade
+	//- the sidebar uses .secondary; which is already within the jade code below; it has to stay outside of .primary
+	include ./includes/blogSidebarSegment.jade
+
+block footer
+	include ./includes/footer.jade
