@@ -2,96 +2,39 @@ block headLine
 	h1 Welcome
 
 block introText
-	.introText
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio earum aspernatur, culpa magni cupiditate voluptate excepturi officia eaque mollitia minus?
+	//- .introText
+	//- 	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio earum aspernatur, culpa magni cupiditate voluptate excepturi officia eaque mollitia minus?
+	include introText.jade
 
 block slideImages
-	.sliderImage
-		ul.flexslider
-			li
-				img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				img(src="http://lorempixel.com/161/121", alt="Lorem")
+	include sliderImage.021715.1.jade
 
 block copyBlockOne
-	.copyBlockOne
-		h3 Lorem ipsum dolor sit.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
+	//- .copyBlockOne
+	//- 	h3 Lorem ipsum dolor sit.
+	//- 	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
+	include copyBlockOne.jade
 
 //- this is only used for index.jade
 block benefitBlock
-	.bulletBlock
-		.block1
-			h3 Lorem ipsum dolor sit.
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
-		.block2
-			h3 Lorem ipsum dolor sit.
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
-		.block3
-			h3 Lorem ipsum dolor sit.
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
-		.block4
-			h3 Lorem ipsum dolor sit.
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
+	include bulletBlock.jade
+	//- .bulletBlock
+	//- 	.block1
+	//- 		h3 Lorem ipsum dolor sit.
+	//- 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
+	//- 	.block2
+	//- 		h3 Lorem ipsum dolor sit.
+	//- 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
+	//- 	.block3
+	//- 		h3 Lorem ipsum dolor sit.
+	//- 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
+	//- 	.block4
+	//- 		h3 Lorem ipsum dolor sit.
+	//- 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
 
 //- this is only used for index.jade
 block carouselWork
-	.latestWorks
-		//- This is another image slider gallery
-		h3 Latest Works
-		.carouselScroll
-			a(href="#",class='prev')
-			a(href="#",class='next')
-		.carouselImages
-			ul
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
-				li
-					a(href="#")
-						span.overlayDetails
-						img(src="http://lorempixel.com/161/121", alt="Lorem")
+	include latestWork.021715.1.jade
 
 //- this is only used for index2.jade
 block portfolioWork
@@ -105,13 +48,4 @@ block testimonials
 block endingBlock
 	//- This ending block doesn't exist when portfolioWork and testimonials are used
 
-	.endingBlock
-		h3 Lorem ipsum dolor sit amet.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatibus explicabo accusamus ab praesentium libero hic sequi assumenda, minus ut.
-		ul
-			li
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam vitae sequi, maxime numquam asperiores ab vel placeat quae et sint.
-			li
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolor laudantium quia voluptatibus, eos sed ducimus quaerat dolorem sint culpa!
-			li
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque impedit, excepturi dignissimos, eum iure possimus rem ullam quisquam porro maxime.
+	include endingBlock.021715.1.jade

@@ -1,0 +1,13 @@
+extends ./index.layout.jade
+
+block sidebarNav
+	include ./includes/sidebarNavBlog.jade
+
+block contentHome
+	h1 Blog
+	include ./includes/introText.jade
+	include ./includes/blogPostSegment.jade
+	include ./includes/pageNavBlog.jade
+
+block footer
+	include ./includes/footer.jade
