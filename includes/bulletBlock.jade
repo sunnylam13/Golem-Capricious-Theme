@@ -1,13 +1,16 @@
 .bulletBlock
-	.block1
-		h3 Lorem ipsum dolor sit.
+
+	mixin bulletBenefitBlock
+		h3
+			img(src="http://lorempixel.com/32/32", alt="Icon Image")
+			| Lorem ipsum dolor sit.
 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
-	.block2
-		h3 Lorem ipsum dolor sit.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
-	.block3
-		h3 Lorem ipsum dolor sit.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
-	.block4
-		h3 Lorem ipsum dolor sit.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus pariatur dolorem temporibus eius magnam, laborum exercitationem nam totam nobis fugit, asperiores sint eos provident sed quo amet labore cum.
+
+	.block1.one-half
+		+bulletBenefitBlock
+	.block2.one-half.last
+		+bulletBenefitBlock
+	.block3.one-half
+		+bulletBenefitBlock
+	.block4.one-half.last
+		+bulletBenefitBlock

@@ -22,20 +22,23 @@
 // 		MAIN CODE
 ////////////////////////////////////////////
 
-.one-half {
-	@include column(6);
+h1.title {
+	padding: 0;
+	font-size: $basefontsize*1.6;
+	font-weight: 900px;
 }
 
-.one-third {
-	@include column(4);
+.introText {
+	font-family: $introTextFamily;
+	font-style: italic;
+	font-size: $basefontsize*1.4;
 }
 
-.one-sixth {
-	@include column(2);
-}
+////////////////////////////////////////////
+///// 		SIDEBAR NAV MENU
+///////////////////////////////////////////////
 
-// this is used to make sure that blocks on the right edge are flush
-.last {
-	margin-right: 0 !important;
-	clear: right;
-}
+
+////////////////////////////////////////////
+
+

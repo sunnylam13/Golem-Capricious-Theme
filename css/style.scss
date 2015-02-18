@@ -16,9 +16,24 @@
 // 		VARIABLES
 ////////////////////////////////////////////
 
+// FONT FAMILIES
 // $basefontfamily:'Lato', sans-serif;
+// $basefontfamily:'Open Sans', sans-serif;
+// font-family: 'Droid Sans', sans-serif;
+// $basefontfamily:'Amaranth', sans-serif;
 $basefontfamily:'Open Sans', sans-serif;
-$basefontsize:14px;
+$introTextFamily: 'Droid Sans', sans-serif;
+$headingFontFamily: 'Amaranth', sans-serif;
+
+// FONT COLOURS
+
+// FONT SIZES
+$basefontsize:12px;
+
+// LINE HEIGHTS
+$baselineheight:12px;
+
+// BACKGROUND COLORS
 $basebackcolor: darken(white,2.5%);
 $sidebarNavBack: #653082;
 
@@ -58,3 +73,57 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 li {
 	list-style-type: none;
 }
+
+h1,h2,h3,h4,h5,h6 {
+	color: #4a4a4a;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+	font-family: $headingFontFamily;
+}
+
+h3 {
+	font-size: $basefontsize*1.5;
+	line-height: $baselineheight*1.83;
+}
+
+p {
+	line-height: $baselineheight*1.66;
+	margin-bottom: 20px;
+	font-size: $basefontsize*0.99;
+}
+
+////////////////////////////////////////////
+// 		MULTI-SECTION CONTENT
+////////////////////////////////////////////
+
+@import 'multi.section';
+
+////////////////////////////////////////////
+// 		HOME CONTENT
+////////////////////////////////////////////
+
+@import 'home';
+
+////////////////////////////////////////////
+// 		PORTFOLIO CONTENT
+////////////////////////////////////////////
+
+@import 'portfolio';
+
+////////////////////////////////////////////
+// 		BLOG CONTENT
+////////////////////////////////////////////
+
+@import 'blog';
+
+////////////////////////////////////////////
+// 		FEATURES CONTENT
+////////////////////////////////////////////
+
+@import 'features';
+
+////////////////////////////////////////////
+// 		CONTACT US CONTENT
+////////////////////////////////////////////
+
+@import 'contactus';

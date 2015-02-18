@@ -22,20 +22,13 @@
 // 		MAIN CODE
 ////////////////////////////////////////////
 
-.one-half {
-	@include column(6);
-}
-
-.one-third {
-	@include column(4);
-}
-
-.one-sixth {
-	@include column(2);
-}
-
-// this is used to make sure that blocks on the right edge are flush
-.last {
-	margin-right: 0 !important;
-	clear: right;
+.copyBlockOne {
+	// & h3 {
+	// 	font-size: $basefontsize*1.5;
+	// 	line-height: $baselineheight*1.83;
+	// }
+	// & p {
+	// 	line-height: $baselineheight*1.66;
+	// 	margin-bottom: 20px;
+	// }
 }
