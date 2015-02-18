@@ -2,17 +2,14 @@
 // 		IMAGE SLIDER
 ////////////////////////////////////////////
 .sliderImage
-	ul.flexslider
+	mixin flexImageTemplate
 		li
-			img(src="http://lorempixel.com/161/121", alt="Lorem")
-		li
-			img(src="http://lorempixel.com/161/121", alt="Lorem")
-		li
-			img(src="http://lorempixel.com/161/121", alt="Lorem")
-		li
-			img(src="http://lorempixel.com/161/121", alt="Lorem")
-		li
-			img(src="http://lorempixel.com/161/121", alt="Lorem")
-		li
-			img(src="http://lorempixel.com/161/121", alt="Lorem")
+			img(src="http://lorempixel.com/702/382", alt="Lorem")
+
+	ul.flexslider.bxslider
+		+flexImageTemplate
+		+flexImageTemplate
+		+flexImageTemplate
+		+flexImageTemplate
+		+flexImageTemplate
 // END IMAGE SLIDER

@@ -2,6 +2,7 @@
 // 		SETUP STUFF
 ////////////////////////////////////////////
 
+// http://elemisdesign.com/demos/caprice/style/images/
 
 ////////////////////////////////////////////
 // 		IMPORTS
@@ -11,33 +12,14 @@
 @import 'grid';
 @import 'responsive';
 @import 'columns';
+@import 'typography';
+@import 'mixins.universal';
 
 ////////////////////////////////////////////
 // 		VARIABLES
 ////////////////////////////////////////////
 
-// FONT FAMILIES
-// $basefontfamily:'Lato', sans-serif;
-// $basefontfamily:'Open Sans', sans-serif;
-// font-family: 'Droid Sans', sans-serif;
-// $basefontfamily:'Amaranth', sans-serif;
-$basefontfamily:'Open Sans', sans-serif;
-$introTextFamily: 'Droid Sans', sans-serif;
-$headingFontFamily: 'Amaranth', sans-serif;
-
-// FONT COLOURS
-
-// FONT SIZES
-$basefontsize:12px;
-
-// LINE HEIGHTS
-$baselineheight:12px;
-
-// BACKGROUND COLORS
-$basebackcolor: darken(white,2.5%);
-$sidebarNavBack: #653082;
-
-// suggest you build some classes ahead of time which you can assign as required
+// see typography.scss
 
 ////////////////////////////////////////////
 ///// 		MIXINS
@@ -52,11 +34,15 @@ body {
 	font-family: $basefontfamily;
 	font-size: $basefontsize;
 	background: $basebackcolor;
+	position: relative;
+	z-index: 10;
 }
 
 .wrapper {
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
+	position: relative;
+	z-index: 10;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
@@ -89,7 +75,7 @@ h3 {
 p {
 	line-height: $baselineheight*1.66;
 	margin-bottom: 20px;
-	font-size: $basefontsize*0.99;
+	font-size: $basefontsize;
 }
 
 ////////////////////////////////////////////

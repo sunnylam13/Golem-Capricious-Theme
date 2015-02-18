@@ -18,6 +18,25 @@ jQuery(document).ready(function($) {
 //////////////////////////////////////////////////
 // EXECUTION CODE
 
+$('.bxslider').bxSlider({
+	controls: true,
+	auto: true,
+	autoControls: true,
+	slideWidth: 702
+});
+
+$('.bxsliderLW').bxSlider({
+  minSlides: 3,
+  maxSlides: 4,
+  slideWidth: 161,
+  slideMargin: 10,
+  auto: true,
+  autoControls: true
+  // nextSelector: '.prev',
+  // prevSelector: '.next'
+  // nextText: 'Onward →',
+  // prevText: '← Go back'
+});
 
 //////////////////////////////////////////////////
 

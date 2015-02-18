@@ -31,14 +31,94 @@ h1.title {
 .introText {
 	font-family: $introTextFamily;
 	font-style: italic;
-	font-size: $basefontsize*1.4;
+	& p {
+		font-size: $basefontsize*1.4;
+	}
+}
+
+.line {
+	background: $horizontalLine;
+	height: 2px;
+	padding: 20px 0 0 0;
+	color: $sidebarNavFontColor;
 }
 
 ////////////////////////////////////////////
 ///// 		SIDEBAR NAV MENU
 ///////////////////////////////////////////////
 
+@import 'sidebarNav';
+
+////////////////////////////////////////////
+///// 		CONTENT SECTION
+///////////////////////////////////////////////
+
+.content {
+	position: relative;
+	z-index: 10;
+	left: 22.5%;
+	padding-top: 3%;
+	padding-right: 10%;
+	@include column(9.5);
+}
 
 ////////////////////////////////////////////
 
+////////////////////////////////////////////
+///// 		IMAGE SLIDER HOME PAGE
+///////////////////////////////////////////////
 
+.sliderImage {
+	// position: relative;
+	// z-index: 500;
+	// & img {
+	// 	z-index: 501;
+	// }
+	& .bxslider {
+		// position: relative;
+		// z-index: 409;
+	}
+}
+
+// END IMAGE SLIDER HOME PAGE
+
+////////////////////////////////////////////
+
+////////////////////////////////////////////
+// 		LATEST WORK
+////////////////////////////////////////////
+
+
+.carouselScroll {
+	float: right;
+	margin-top: -42px;
+	width: 60px;
+	& .prev {
+		float: left;
+		background: #fff url(/images/controls.png) no-repeat left top;
+		display: block;
+		cursor: pointer;
+		width: 25px;
+		height: 25px;
+		border: $carouselScrollBorder;
+	}
+	& .next {
+		float: right;
+		margin-left: 5px;
+		background: #fff url(/images/controls.png) no-repeat right top;
+		display: block;
+		cursor: pointer;
+		width: 25px;
+		height: 25px;
+		border: $carouselScrollBorder;
+	}
+	& span {
+		& .fa-angle-left, .fa-angle-right {
+			padding: 2%;
+			margin-left: 3%;
+		}
+	} 
+}
+
+
+// END LATEST WORK

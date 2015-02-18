@@ -32,3 +32,18 @@
 	// 	margin-bottom: 20px;
 	// }
 }
+
+.bulletBlock {
+	& h3 img {
+		margin-right: 5%;
+	}
+}
+
+.endingBlock {
+	& li {
+		list-style: hiragana inside;
+	}
+	& ul > li > p {
+		padding-left: 3%;
+	}
+}

@@ -1,48 +1,27 @@
 .latestWorks
+
+	mixin latestWorksEntry
+		li
+			a(href="#")
+				span.overlayDetails
+				img(src="http://lorempixel.com/161/121", alt="Lorem")
+
 	//- This is another image slider gallery
 	h3 Latest Works
 	.carouselScroll
 		a(href="#",class='prev')
+			//- span.fa.fa-angle-left.fa-2x
 		a(href="#",class='next')
+			//- span.fa.fa-angle-right.fa-2x
 	.carouselImages
-		ul
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
-			li
-				a(href="#")
-					span.overlayDetails
-					img(src="http://lorempixel.com/161/121", alt="Lorem")
+		ul.bxsliderLW
+			+latestWorksEntry
+			+latestWorksEntry
+			+latestWorksEntry
+			+latestWorksEntry
+			+latestWorksEntry
+			+latestWorksEntry
+			+latestWorksEntry
+			+latestWorksEntry
+			+latestWorksEntry
+			+latestWorksEntry

@@ -1,0 +1,61 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+// suggest you build some classes ahead of time which you can assign as required
+
+// FONT FAMILIES
+// $basefontfamily:'Lato', sans-serif;
+// $basefontfamily:'Open Sans', sans-serif;
+// font-family: 'Droid Sans', sans-serif;
+// $basefontfamily:'Amaranth', sans-serif;
+$basefontfamily:'Open Sans', sans-serif;
+$introTextFamily: 'Droid Sans', sans-serif;
+$headingFontFamily: 'Amaranth', sans-serif;
+$sidebarNavFontFamily: 'Amaranth', sans-serif;
+
+// FONT COLOURS
+$sidebarNavFontColor: #fcfcfc;
+
+// FONT SIZES
+$basefontsize:12px;
+
+// LINE HEIGHTS
+$baselineheight:12px;
+
+// BACKGROUND COLORS
+$basebackcolor: darken(white,2.5%);
+$sidebarNavBack: #653082;
+
+// BORDERS
+$sidebarBorderColor: rgba(0, 0, 0, 0.50);
+$carouselScrollBorder: 1px solid #dbdbdb;
+
+// HORIZONTAL LINES
+// these use the background selector
+$horizontalLine: transparent url(/images/line.png) repeat-x;
+// NOTE:  make sure the URL is correct otherwise you don't see a thing
+
+// PADDING
+$sidebarNavPadding: 8% 4% 8% 4%;

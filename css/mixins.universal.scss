@@ -1,0 +1,33 @@
+@mixin transitionEffectAll ($time) {
+	-webkit-transition: all $time;
+	-moz-transition: all $time;
+	-o-transition: all $time;
+	-ms-transition: all $time;
+}
+
+@mixin subMenuBasic ($left,$top) {
+	// style the subMenu
+	width: 100%;
+	display: none;
+	position: absolute;
+	// left: 89%;
+	// top: 16%;
+	left: $left;
+	top: $top;
+	border:1px solid $sidebarBorderColor;
+	background: $sidebarNavBack;
+	// bx slider's z-index is set to 2000; you have to exceed that value
+	z-index: 4000;
+	// enable the ability for list items to appear
+	& li {
+		display:list-item; //Set the sub navs list items back
+		// float:none;
+		// style the submenu list items
+		& a {
+			display:block;
+			// float:none;
+			padding: $sidebarNavPadding;
+			font-size: $basefontsize*1.1;
+		}
+	}
+}

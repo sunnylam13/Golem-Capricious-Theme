@@ -1,0 +1,121 @@
+.sidebarNav {
+	position: relative;
+	z-index: 4000;
+	background: $sidebarNavBack;
+	@include column(2.5);
+	float: left;
+	height: 100%;
+	position: fixed;
+	padding: 2% 2% 2% 2%;
+	border-left: $sidebarBorderColor;
+	border-right: $sidebarBorderColor;
+	& ul {
+		margin:0;
+		padding:0;
+	}
+	& li {
+		background: transparent url(/images/menu-line.png) no-repeat center top;
+	}
+	& a {
+		display: block;
+		color: $sidebarNavFontColor;
+		text-decoration: none;
+		font-family: $sidebarNavFontFamily;
+		padding: $sidebarNavPadding;
+		@include transitionEffectAll(0.5s);
+		&:link {
+			color: $sidebarNavFontColor;
+		}
+		&:visited {
+			color: $sidebarNavFontColor;
+		}
+		&:hover {
+			color: $sidebarNavFontColor;
+			background: darken($sidebarNavBack,10%);
+		}
+	}
+	& .socialMediaIcons {
+		padding-top: 20%;
+	} 
+	& .mainMenu {
+		padding-top: 20%;
+		// bx slider's z-index is set to 2000; you have to exceed that value
+		position: relative;
+		overflow: visible;
+		z-index: 4000;
+		& ul.subMenuMain {
+			// @include transitionEffectAll(2s);
+		}
+		& li {
+			padding: 0;
+			&:hover ul.subMenuMain {
+				// make subMenu appear when you hover over the mainMenu "li"
+				display: block;
+			}
+		}
+	}
+	// & .subMenuMain {
+	// 	// style the subMenu
+	// 	width: 100%;
+	// 	display: none;
+	// 	// position: absolute;
+	// 	border:1px solid $sidebarBorderColor;
+	// 	// left: 89%;
+	// 	// top: 16%;
+	// 	background: $sidebarNavBack;
+	// 	z-index: 999;
+	// 	// enable the ability for list items to appear
+	// 	& li {
+	// 		display:list-item; //Set the sub navs list items back
+	// 		float:none;
+	// 		// style the submenu list items
+	// 		& a {
+	// 			display:block;
+	// 			float:none;
+	// 			padding: $sidebarNavPadding;
+	// 		}
+	// 	}
+	// }
+	////////////////////////////////////////////
+	/// Each ul.submenu requires different positioning
+	/// one positioning won't work for all
+	/// I created a mixin subMenuBasic that duplicates the code to style each submenu
+	/// seems kind of useful styling each menu separately especially when positioning
+	& .subMenu1 {
+		@include subMenuBasic(100%,12%);
+		// left: 89%;
+		// top: 16%;
+		// left: 100%;
+		// top: 12%;
+		// simply add display: block to make this element visible and edit
+		// display: block;
+	}
+	& .subMenu2 {
+		@include subMenuBasic(100%,29.4%);
+		// left: 89%;
+		// top: 22.4%;
+		// left: 100%;
+		// top: 29.4%;
+		// simply add display: block to make this element visible and edit
+		// display: block;
+	}
+	& .subMenu3 {
+		@include subMenuBasic(100%,47%);
+		// left: 89%;
+		// top: 29%;
+		// left: 100%;
+		// top: 47%;
+		// simply add display: block to make this element visible and edit
+		// display: block;
+	}
+	& .subMenu4 {
+		@include subMenuBasic(100%,65%);
+		// left: 89%;
+		// top: 35%;
+		// left: 100%;
+		// top: 65%;
+		// simply add display: block to make this element visible and edit
+		// display: block;
+	}
+	////////////////////////////////////////////
+}
