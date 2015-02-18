@@ -1,0 +1,50 @@
+extends ./index.layout.jade
+
+block sidebarNav
+	include ./includes/sidebarNav.jade
+
+block contentHome
+
+	mixin serviceIconBlock
+		.one-half
+			h3
+				img(src="http://lorempixel.com/36/30", alt="Icon Image")
+				| Address
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iusto saepe aperiam ipsa dolore adipisci error libero recusandae!
+
+	h1 Service Icons
+	include ./includes/introText.jade
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+	+serviceIconBlock
+
+
+block footer
+	include ./includes/footer.jade

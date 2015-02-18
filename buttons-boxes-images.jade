@@ -1,0 +1,33 @@
+extends ./index.layout.jade
+
+block sidebarNav
+	include ./includes/sidebarNav.jade
+
+block contentHome
+	h1 Buttons, Boxes and Images
+	include ./includes/introText.jade
+	h3 Buttons
+	p You can use any colour button in buttons.
+	a(href="#") Button
+	a(href="#") Red
+	a(href="#") Brown
+	a(href="#") Purple
+	a(href="#") Green
+	a(href="#") Blue
+	.line
+	h3 Boxes
+	.info-box This is an information box.
+	.warning-box This is a warning box.
+	.download-box This is a download box.
+	.note-box This is a note box.
+	.line
+	h3 Images
+	img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='left round')
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi et, ullam eos cupiditate esse quidem aperiam necessitatibus voluptate eveniet quas ipsum tenetur accusantium, velit fugiat beatae cumque assumenda. Debitis, quidem!
+	img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='right round')
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi et, ullam eos cupiditate esse quidem aperiam necessitatibus voluptate eveniet quas ipsum tenetur accusantium, velit fugiat beatae cumque assumenda. Debitis, quidem!
+	img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='center round')
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi et, ullam eos cupiditate esse quidem aperiam necessitatibus voluptate eveniet quas ipsum tenetur accusantium, velit fugiat beatae cumque assumenda. Debitis, quidem!
+
+block footer
+	include ./includes/footer.jade

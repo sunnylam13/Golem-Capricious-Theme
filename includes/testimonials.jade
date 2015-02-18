@@ -1,17 +1,13 @@
 .testimonialsList
-	.testieItem
-		blockquote
-			p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi blanditiis voluptatum accusamus necessitatibus repellendus voluptatem quo eaque, magni ipsa rerum iure, amet pariatur dolore libero neque. Sed sint, optio asperiores quia dolore non labore omnis magni dolorem velit libero obcaecati tempore deserunt, inventore fugit odit maxime nemo! Cum, ducimus.
-			p.person - Lorem ipsum.
-	.testieItem
-		blockquote
-			p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi blanditiis voluptatum accusamus necessitatibus repellendus voluptatem quo eaque, magni ipsa rerum iure, amet pariatur dolore libero neque. Sed sint, optio asperiores quia dolore non labore omnis magni dolorem velit libero obcaecati tempore deserunt, inventore fugit odit maxime nemo! Cum, ducimus.
-			p.person - Lorem ipsum.
-	.testieItem
-		blockquote
-			p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi blanditiis voluptatum accusamus necessitatibus repellendus voluptatem quo eaque, magni ipsa rerum iure, amet pariatur dolore libero neque. Sed sint, optio asperiores quia dolore non labore omnis magni dolorem velit libero obcaecati tempore deserunt, inventore fugit odit maxime nemo! Cum, ducimus.
-			p.person - Lorem ipsum.
-	.testieItem
-		blockquote
-			p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi blanditiis voluptatum accusamus necessitatibus repellendus voluptatem quo eaque, magni ipsa rerum iure, amet pariatur dolore libero neque. Sed sint, optio asperiores quia dolore non labore omnis magni dolorem velit libero obcaecati tempore deserunt, inventore fugit odit maxime nemo! Cum, ducimus.
-			p.person - Lorem ipsum.
+
+	mixin testimonyBlock
+		.testieItem
+			blockquote
+				p.quote Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi blanditiis voluptatum accusamus necessitatibus repellendus voluptatem quo eaque, magni ipsa rerum iure, amet pariatur dolore libero neque. Sed sint, optio asperiores quia dolore non labore omnis magni dolorem velit libero obcaecati tempore deserunt, inventore fugit odit maxime nemo! Cum, ducimus.
+				p.person - Lorem ipsum.
+
+	+testimonyBlock
+	+testimonyBlock
+	+testimonyBlock
+	+testimonyBlock
+	+testimonyBlock

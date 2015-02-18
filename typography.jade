@@ -1,0 +1,129 @@
+extends ./index.layout.jade
+
+block sidebarNav
+	include ./includes/sidebarNav.jade
+
+block contentHome
+	h1 Typography
+	include ./includes/introText.jade
+
+	////////////////////////////////////////////
+	// 		LISTS
+	////////////////////////////////////////////
+
+	.unorderList.one-half
+		h3 Unordered List
+		ul
+			li Lorem ipsum dolor sit amet.
+			li Lorem ipsum dolor sit amet.
+			li Lorem ipsum dolor sit amet.
+			li Lorem ipsum dolor sit amet.
+	.orderList.one-half
+		h3 Ordered List
+		ol
+			li Lorem ipsum dolor sit amet.
+			li Lorem ipsum dolor sit amet.
+			li Lorem ipsum dolor sit amet.
+			li Lorem ipsum dolor sit amet.
+
+	// END LISTS
+
+	.line
+
+	////////////////////////////////////////////
+	// 		BLOCKQUOTE
+	////////////////////////////////////////////
+
+	h3 Blockquote
+	blockquote
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consequuntur excepturi, pariatur molestiae. Voluptates, aliquid culpa odit, non inventore omnis nostrum quia sed assumenda quas modi ea autem nulla saepe!
+
+	// END BLOCKQUOTE
+
+	.line
+
+	////////////////////////////////////////////
+	// 		DROPCAP
+	////////////////////////////////////////////
+
+	h3 Dropcap
+	p
+		span.dropcap D
+			| uis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam eius voluptates culpa blanditiis quis est consequuntur voluptatibus, qui, beatae magni, quam debitis cumque asperiores. Minus tenetur adipisci eos consequuntur autem dolores ut, soluta vel obcaecati doloremque dolor voluptate culpa explicabo cupiditate. Aliquam, eum. Facilis reprehenderit ea illo, corporis error nostrum.
+
+	// END DROPCAP
+
+	.line
+
+	////////////////////////////////////////////
+	// 		HIGHLIGHTS
+	////////////////////////////////////////////
+
+	h3 Highlights
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+		span.lite1 This is a highlight 
+		| Cumque, porro. Pariatur, consequuntur. Consectetur hic officiis ipsam vel, perspiciatis iusto sed cumque molestias omnis debitis assumenda aliquid sit, eligendi, eaque sapiente fuga necessitatibus maxime quidem facilis sequi. 
+		span.lite2 This is a second highlight 
+		| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum incidunt facilis eius eveniet sed cumque quaerat sequi iste dolorem soluta?
+
+	// END HIGHLIGHTS
+
+	.line
+
+	////////////////////////////////////////////
+	// 		SPECIAL TEXTS
+	////////////////////////////////////////////
+
+	.one-third
+		h3 Special Texts
+		p
+			em This is emphasized text
+			br
+			strong This is strong text
+			br
+			abbr(title='This is an abbr - <abbr></abbr>') This is an abbr
+			br
+			del This is deleted text
+			br
+			a(href="#") This is a link
+
+	// END SPECIAL TEXTS
+
+
+	////////////////////////////////////////////
+	// 		CODE DISPLAY
+	////////////////////////////////////////////
+
+	.one-third
+		h3 Code Display
+		pre
+			code
+				| A block of code
+				| A block of code
+				| A block of code
+				| A block of code
+				| A block of code
+				| A block of code
+
+	// END CODE DISPLAY
+
+
+	////////////////////////////////////////////
+	// 		MISC TYPOGRAPHY
+	////////////////////////////////////////////
+
+	.one-third
+		h3 Miscellaneous Typography
+		p Lorem 
+			sup superscript 
+			| dolor sit amet, consectetur adipisicing elit. Quod ab 
+			sub subscript 
+			| recusandae asperiores ducimus natus deleniti, dolorem beatae autem quo 
+			cite cite 
+			| perspiciatis iusto temporibus qui obcaecati repudiandae excepturi 
+			abbr(title='Avenue') AVE.
+
+	// END MISC TYPOGRAPHY
+
+block footer
+	include ./includes/footer.jade

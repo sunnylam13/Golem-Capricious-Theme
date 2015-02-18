@@ -10,6 +10,7 @@
 @import 'normalize';
 @import 'grid';
 @import 'responsive';
+@import 'columns';
 
 ////////////////////////////////////////////
 // 		VARIABLES
@@ -20,6 +21,8 @@ $basefontfamily:'Open Sans', sans-serif;
 $basefontsize:14px;
 $basebackcolor: darken(white,2.5%);
 $sidebarNavBack: #653082;
+
+// suggest you build some classes ahead of time which you can assign as required
 
 ////////////////////////////////////////////
 ///// 		MIXINS
@@ -39,6 +42,16 @@ body {
 .wrapper {
 	max-width: 1000px;
 	margin: 0 auto;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
 }
 
 // for some mysterious reason a dot kept appearing in the header fixed nav menu so I decided to set that global li's would be default list-style-type: none unless specified otherwise.
