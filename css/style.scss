@@ -25,6 +25,11 @@
 ///// 		MIXINS
 ///////////////////////////////////////////////
 
+@mixin baseParagraphStyle {
+	line-height: $baselineheight*1.66;
+	margin-bottom: 20px;
+	font-size: $basefontsize;
+}
 
 ////////////////////////////////////////////
 // 		MAIN CODE
@@ -73,9 +78,8 @@ h3 {
 }
 
 p {
-	line-height: $baselineheight*1.66;
-	margin-bottom: 20px;
-	font-size: $basefontsize;
+	// to adjust this change the mixin
+	@include baseParagraphStyle;
 }
 
 ////////////////////////////////////////////
@@ -113,3 +117,9 @@ p {
 ////////////////////////////////////////////
 
 @import 'contactus';
+
+////////////////////////////////////////////
+///// 		FOOTER
+///////////////////////////////////////////////
+
+@import 'footer';

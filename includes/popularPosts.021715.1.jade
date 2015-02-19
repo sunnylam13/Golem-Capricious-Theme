@@ -1,18 +1,16 @@
 .popularPosts
+
+	mixin popularPostTemplate
+		li
+			a(href='javascript:void(0)')
+				img(src="http://lorempixel.com/52/52", alt="Lorem")
+			a(href="#")
+				h5 Lorem ipsum dolor.
+			p.italicIt 26 Jan 2015 | 
+				a(href="#",class='italicIt') 25 Comments
+
 	h3 Popular Posts
 	ul
-		li
-			img(src="http://lorempixel.com/52/52", alt="Lorem")
-			a(href="#") Lorem ipsum dolor.
-			p 26 Jan 2015 | 
-				a(href="#") 25 Comments
-		li
-			img(src="http://lorempixel.com/52/52", alt="Lorem")
-			a(href="#") Lorem ipsum dolor.
-			p 26 Jan 2015 | 
-				a(href="#") 25 Comments
-		li
-			img(src="http://lorempixel.com/52/52", alt="Lorem")
-			a(href="#") Lorem ipsum dolor.
-			p 26 Jan 2015 | 
-				a(href="#") 25 Comments
+		+popularPostTemplate
+		+popularPostTemplate
+		+popularPostTemplate

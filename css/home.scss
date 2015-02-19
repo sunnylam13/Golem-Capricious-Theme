@@ -41,9 +41,12 @@
 
 .endingBlock {
 	& li {
-		list-style: hiragana inside;
+		// list-style: hiragana inside;
+		background: transparent url(/images/bullet.png) left 8px no-repeat;
+		padding-left: 3%;
 	}
 	& ul > li > p {
-		padding-left: 3%;
+		// padding-left: 3%;
+
 	}
 }

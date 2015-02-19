@@ -1,0 +1,68 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+.popularPosts {
+	& img {
+		height: 50px;
+		width: 50px;
+		float: left;
+		margin-right: 10px;
+		border-radius: 3px;
+		opacity: 1;
+		@include transitionEffectAll(0.5s);
+		&:hover {
+			// you may wish to accomplish the image hover effect with javascript
+			opacity: 0.85;
+		}
+	}
+	& a {
+		color: $footerFontColor;
+		text-decoration: none;
+		&:link {
+			color: $footerFontColor;
+		}
+		&:visited {
+			color: $footerFontColor;
+		}
+		&:hover {
+			color: $footerFontColor;
+		}
+	}
+	& li > a > h5 {
+		font-size: $basefontsize*1.2;
+	}
+	& li > p {
+		font-size: $basefontsize*0.85;
+	}
+}
+
+.about {
+	@include baseParagraphStyle;
+	& span {
+		line-height: $baselineheight*1.66;
+		margin-bottom: 20px;
+		font-size: $basefontsize;
+	}
+}
+

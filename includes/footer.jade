@@ -1,4 +1,9 @@
 .footer.content
-	include popularPosts.021715.1.jade
-	include about.jade
-	include customText.jade
+	//- Decided not to use .one-third class inside of the included files because I might use them elsewhere where they're not going to be one third
+	//- Doing one-third here will work because in style.scss we set margin and padding to 0 so that no ghost space would ruin alignment
+	.one-third
+		include popularPosts.021715.1.jade
+	.one-third
+		include about.jade
+	.one-third
+		include customText.jade

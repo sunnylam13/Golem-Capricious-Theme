@@ -78,6 +78,20 @@ h1.title {
 		// position: relative;
 		// z-index: 409;
 	}
+	////////////////////////////////////////////
+	/// Haven't figured out how to configure the directional nav for the image slider yet
+	
+	& .flexslider {
+		& .flex-direction-nav ~ .flexslider {
+			&:hover {
+				display: block;
+			}
+		}
+	}
+	& .flex-direction-nav {
+		display: none;
+	}
+	////////////////////////////////////////////
 }
 
 // END IMAGE SLIDER HOME PAGE
@@ -94,23 +108,25 @@ h1.title {
 	margin-top: -42px;
 	width: 60px;
 	& .prev {
-		float: left;
-		background: #fff url(/images/controls.png) no-repeat left top;
-		display: block;
-		cursor: pointer;
-		width: 25px;
-		height: 25px;
-		border: $carouselScrollBorder;
+		@include directionButtons(left);
+		// float: left;
+		// background: #fff url(/images/controls.png) no-repeat left top;
+		// display: block;
+		// cursor: pointer;
+		// width: 25px;
+		// height: 25px;
+		// border: $carouselScrollBorder;
 	}
 	& .next {
-		float: right;
-		margin-left: 5px;
-		background: #fff url(/images/controls.png) no-repeat right top;
-		display: block;
-		cursor: pointer;
-		width: 25px;
-		height: 25px;
-		border: $carouselScrollBorder;
+		@include directionButtons(right);
+		// float: right;
+		// margin-left: 5px;
+		// background: #fff url(/images/controls.png) no-repeat right top;
+		// display: block;
+		// cursor: pointer;
+		// width: 25px;
+		// height: 25px;
+		// border: $carouselScrollBorder;
 	}
 	& span {
 		& .fa-angle-left, .fa-angle-right {

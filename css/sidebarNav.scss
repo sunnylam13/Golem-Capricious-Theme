@@ -36,6 +36,19 @@
 	}
 	& .socialMediaIcons {
 		padding-top: 20%;
+		& ul {
+			text-align: left;
+			& li {
+				display: inline-block;
+				// get rid of the line background image here
+				background: none;
+				padding: 0;
+				padding-right: 3px;
+			}
+			& a:hover {
+				background: $sidebarNavBack;
+			}
+		}
 	} 
 	& .mainMenu {
 		padding-top: 20%;

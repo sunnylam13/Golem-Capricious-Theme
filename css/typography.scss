@@ -12,19 +12,6 @@
 // 		VARIABLES
 ////////////////////////////////////////////
 
-
-
-////////////////////////////////////////////
-///// 		MIXINS
-///////////////////////////////////////////////
-
-
-////////////////////////////////////////////
-// 		MAIN CODE
-////////////////////////////////////////////
-
-// suggest you build some classes ahead of time which you can assign as required
-
 // FONT FAMILIES
 // $basefontfamily:'Lato', sans-serif;
 // $basefontfamily:'Open Sans', sans-serif;
@@ -37,6 +24,8 @@ $sidebarNavFontFamily: 'Amaranth', sans-serif;
 
 // FONT COLOURS
 $sidebarNavFontColor: #fcfcfc;
+$footerFontColor: #4a4a4a;
+$lite1Color: #688dad;
 
 // FONT SIZES
 $basefontsize:12px;
@@ -51,6 +40,7 @@ $sidebarNavBack: #653082;
 // BORDERS
 $sidebarBorderColor: rgba(0, 0, 0, 0.50);
 $carouselScrollBorder: 1px solid #dbdbdb;
+$lite1Border: 1px dotted #688dad;
 
 // HORIZONTAL LINES
 // these use the background selector
@@ -59,3 +49,29 @@ $horizontalLine: transparent url(/images/line.png) repeat-x;
 
 // PADDING
 $sidebarNavPadding: 8% 4% 8% 4%;
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+// suggest you build some classes ahead of time which you can assign as required
+
+// I almost always get rid of text decoration so why no just get rid of it by default?
+a {
+	text-decoration: none;
+}
+
+// primarily used in footer
+.lite1 {
+	color: $lite1Color;
+	border-bottom: $lite1Border;
+}
+
+.italicIt {
+	font-style: italic;
+}

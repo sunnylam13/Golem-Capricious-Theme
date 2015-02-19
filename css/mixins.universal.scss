@@ -31,3 +31,16 @@
 		}
 	}
 }
+
+@mixin directionButtons ($arrowDirection) {
+	// float direction should match arrow direction
+	// where $direction is either left or right for the direction of the arrow
+	// we assume the background image is always the same
+	float: $arrowDirection;
+	background: #fff url(/images/controls.png) no-repeat $arrowDirection top;
+	display: block;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	border: $carouselScrollBorder;
+}
