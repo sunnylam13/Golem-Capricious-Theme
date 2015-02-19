@@ -39,13 +39,14 @@ ul.testimonialListV2 {
 		margin-bottom: 20px;
 	}
 	& blockquote p {
-		margin: 0 0 10px 0;
-		font-size: $basefontsize*14/12;
-		font-style: italic;
-		color: $blockquoteColor;
-		line-height: $baselineheight*24/12;
-		padding-left: 30px;
-		background: transparent url(/images/quote.png) no-repeat left 7px;
+		@include blockquoteCodeGrey;
+		// margin: 0 0 10px 0;
+		// font-size: $basefontsize*14/12;
+		// font-style: italic;
+		// color: $blockquoteColor;
+		// line-height: $baselineheight*24/12;
+		// padding-left: 30px;
+		// background: transparent url(/images/quote.png) no-repeat left 7px;
 	}
 	& cite {
 		padding-left: 25px;

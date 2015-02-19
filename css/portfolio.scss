@@ -53,11 +53,14 @@ ul.filtering-nav {
 .portfolioItem {
 	// since we have portfolio pages that use 4 columns, 3, 2 and 1 we can't use @include column(4) here... we should apply our pre-made classes in columns.scss
 	// @include column(4);
-	& img {
-		border-radius: 3px;
-		margin-bottom: 5%;
-		max-width: 100%;
+	& a {
+		& img {
+			border-radius: 3px;
+			margin-bottom: 5%;
+			max-width: 100%;
+		}
 	}
+	
 	& h4 a {
 		text-decoration: none;
 		font-family: $headingFontFamily;
@@ -75,4 +78,28 @@ ul.filtering-nav {
 	& p {
 		font-family: $introTextFamily;
 	}
+}
+
+// in the one column portfolio display I had to...
+// a.  assign a class for these elements called .portImgCol and used that with the element to maximize targeting...
+// b.  set the image to display: block which automatically forces the heading, text and button to the left side...
+
+img.portImg1Col {
+	display: block;
+	@include column(8);
+	// max-width: 457px;
+	max-height: 251px;
+	margin-right: 2%;
+}
+
+h4.portImag1Col {
+	// padding-left: 3%;
+}
+
+p.portImag1Col {
+	// padding-left: 3%;
+}
+
+blockquote.portPost p {
+	@include blockquoteCodeClear;
 }

@@ -60,6 +60,25 @@ $sidebarNavPadding: 8% 4% 8% 4%;
 ///// 		MIXINS
 ///////////////////////////////////////////////
 
+@mixin blockquoteCodeGrey {
+	margin: 0 0 10px 0;
+	font-size: $basefontsize*14/12;
+	font-style: italic;
+	color: $blockquoteColor;
+	line-height: $baselineheight*24/12;
+	padding-left: 30px;
+	background: transparent url(/images/quote.png) no-repeat left 7px;
+}
+
+@mixin blockquoteCodeClear {
+	margin: 0 0 10px 0;
+	font-size: $basefontsize*14/12;
+	font-style: italic;
+	color: $blockquoteColor;
+	line-height: $baselineheight*24/12;
+	padding-left: 30px;
+	background: transparent url(/images/quote.png) no-repeat left 7px;
+}
 
 ////////////////////////////////////////////
 // 		MAIN CODE
@@ -86,3 +105,4 @@ a {
 // 	font-family: $introTextFamily;
 // 	font-size: $basefontsize*.9;
 // }
+

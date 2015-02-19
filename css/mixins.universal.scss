@@ -93,3 +93,18 @@
 		color: $sidebarNavFontColor;
 	}
 }
+
+.buttonBlue {
+	@include portfolioButtonsV1;
+	background: $sidebarNavBack;
+	color: $sidebarNavFontColor;
+	&:link {
+		color: $sidebarNavFontColor;
+	}
+	&:visited {
+		color: $sidebarNavFontColor;
+	}
+	&:hover {
+		background: $altHoverColorOption2;
+	}
+}

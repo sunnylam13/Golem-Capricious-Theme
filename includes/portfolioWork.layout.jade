@@ -1,3 +1,111 @@
+//- ===================================
+//- MIXINS
+//- ===================================
+
+mixin portfolioItemBase
+	a(href="#")
+		img(src="http://lorempixel.com/1200/960", alt="Lorem", title='Caption', rel='prettyPhoto [portfolio]')
+	h4
+		a(href='#') Lorem ipsum
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+
+mixin portfolioItemBase1Col
+	a(href="#")
+		img(src="http://lorempixel.com/1200/960", alt="Lorem", title='Caption', rel='prettyPhoto [portfolio]',class='portImg1Col')
+	h4.portImag1Col
+		a(href='#') Lorem ipsum
+	p.portImag1Col Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+	a.buttonBlue(href='portfolio5.html') View Project
+
+
+//- you can call a mixin within a mixin to reduce code duplication
+
+//- ===================================
+//- 1 COLUMN MIXINS
+//- ===================================
+
+mixin portfolioItemWeb1col
+	.portfolioItem.portWeb.full-monty
+		+portfolioItemBase1Col
+
+mixin portfolioItemPhoto1col
+	.portfolioItem.portPhoto.full-monty
+		+portfolioItemBase1Col
+
+mixin portfolioItemGraphic1col
+	.portfolioItem.portGraphic.full-monty
+		+portfolioItemBase1Col
+
+mixin portfolioItemVideo1col
+	.portfolioItem.portVideo.full-monty
+		+portfolioItemBase1Col
+
+//- ===================================
+//- 2 COLUMN MIXINS
+//- ===================================
+
+mixin portfolioItemWeb2col
+	.portfolioItem.portWeb.one-half
+		+portfolioItemBase
+
+mixin portfolioItemPhoto2col
+	.portfolioItem.portPhoto.one-half
+		+portfolioItemBase
+
+mixin portfolioItemGraphic2col
+	.portfolioItem.portGraphic.one-half
+		+portfolioItemBase
+
+mixin portfolioItemVideo2col
+	.portfolioItem.portVideo.one-half
+		+portfolioItemBase
+
+//- ===================================
+//- 3 COLUMN MIXINS
+//- ===================================
+
+mixin portfolioItemWeb3col
+	.portfolioItem.portWeb.one-third
+		+portfolioItemBase
+
+mixin portfolioItemPhoto3col
+	.portfolioItem.portPhoto.one-third
+		+portfolioItemBase
+
+mixin portfolioItemGraphic3col
+	.portfolioItem.portGraphic.one-third
+		+portfolioItemBase
+
+mixin portfolioItemVideo3col
+	.portfolioItem.portVideo.one-third
+		+portfolioItemBase
+
+//- ===================================
+//- 4 COLUMN MIXINS
+//- ===================================
+
+mixin portfolioItemWeb4col
+	.portfolioItem.portWeb.one-fourth
+		+portfolioItemBase
+
+mixin portfolioItemPhoto4col
+	.portfolioItem.portPhoto.one-fourth
+		+portfolioItemBase
+
+mixin portfolioItemGraphic4col
+	.portfolioItem.portGraphic.one-fourth
+		+portfolioItemBase
+
+mixin portfolioItemVideo4col
+	.portfolioItem.portVideo.one-fourth
+		+portfolioItemBase
+
+//- ===================================
+
+//- ===================================
+//- MAIN CODE
+//- ===================================
+
 .portfolioWork
 	block filterNav
 		ul.filtering-nav
@@ -14,108 +122,5 @@
 	//- create a kind of dividing div
 	.clear
 
-	mixin portfolioItemBase
-		//- img(src="http://lorempixel.com/221/174", alt="Lorem")
-		img(src="http://lorempixel.com/1200/960", alt="Lorem")
-		//- a(href='#')
-		//- 	h4 Lorem ipsum
-		h4
-			a(href='#') Lorem ipsum
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-
-	//- you can call a mixin within a mixin to reduce code duplication
-
-	//- ===================================
-	//- 1 COLUMN MIXINS
-	//- ===================================
-
-	mixin portfolioItemWeb1col
-		.portfolioItem.portWeb.full-monty
-			+portfolioItemBase
-
-	mixin portfolioItemPhoto1col
-		.portfolioItem.portPhoto.full-monty
-			+portfolioItemBase
-
-	mixin portfolioItemGraphic1col
-		.portfolioItem.portGraphic.full-monty
-			+portfolioItemBase
-
-	mixin portfolioItemVideo1col
-		.portfolioItem.portVideo.full-monty
-			+portfolioItemBase
-
-	//- ===================================
-	//- 2 COLUMN MIXINS
-	//- ===================================
-
-	mixin portfolioItemWeb2col
-		.portfolioItem.portWeb.one-half
-			+portfolioItemBase
-
-	mixin portfolioItemPhoto2col
-		.portfolioItem.portPhoto.one-half
-			+portfolioItemBase
-
-	mixin portfolioItemGraphic2col
-		.portfolioItem.portGraphic.one-half
-			+portfolioItemBase
-
-	mixin portfolioItemVideo2col
-		.portfolioItem.portVideo.one-half
-			+portfolioItemBase
-
-	//- ===================================
-	//- 3 COLUMN MIXINS
-	//- ===================================
-
-	mixin portfolioItemWeb3col
-		.portfolioItem.portWeb.one-third
-			+portfolioItemBase
-
-	mixin portfolioItemPhoto3col
-		.portfolioItem.portPhoto.one-third
-			+portfolioItemBase
-
-	mixin portfolioItemGraphic3col
-		.portfolioItem.portGraphic.one-third
-			+portfolioItemBase
-
-	mixin portfolioItemVideo3col
-		.portfolioItem.portVideo.one-third
-			+portfolioItemBase
-
-	//- ===================================
-	//- 4 COLUMN MIXINS
-	//- ===================================
-
-	mixin portfolioItemWeb4col
-		.portfolioItem.portWeb.one-fourth
-			+portfolioItemBase
-
-	mixin portfolioItemPhoto4col
-		.portfolioItem.portPhoto.one-fourth
-			+portfolioItemBase
-
-	mixin portfolioItemGraphic4col
-		.portfolioItem.portGraphic.one-fourth
-			+portfolioItemBase
-
-	mixin portfolioItemVideo4col
-		.portfolioItem.portVideo.one-fourth
-			+portfolioItemBase
-
 	block portfolioList
-		//- .portfolioList
-		//- 	+portfolioItemWeb
-		//- 	+portfolioItemWeb
-		//- 	+portfolioItemWeb
-		//- 	+portfolioItemWeb
-		//- 	+portfolioItemWeb
-		//- 	+portfolioItemPhoto
-		//- 	+portfolioItemPhoto
-		//- 	+portfolioItemPhoto
-		//- 	+portfolioItemPhoto
-		//- 	+portfolioItemGraphic
-		//- 	+portfolioItemGraphic
-		//- 	+portfolioItemGraphic
+		
