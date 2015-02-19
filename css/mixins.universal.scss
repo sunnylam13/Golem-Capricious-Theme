@@ -77,3 +77,19 @@
 		color: $baseHoverColor;
 	}
 }
+
+@mixin clearDividerLine {
+	// use .clear before you use .line
+	.clear {
+		clear:both;
+	}
+
+	// for the dividing line div to work you must first use div.clear (above) first... otherwise the div gets stuck within another element or div
+
+	.line {
+		background: $horizontalLine;
+		height: 2px;
+		padding: 20px 0 0 0;
+		color: $sidebarNavFontColor;
+	}
+}

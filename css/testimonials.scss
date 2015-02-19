@@ -1,0 +1,58 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+.testimonialsList {
+	// so that the testimonial blocks go right across the entire width of .content
+	padding-right: 0;
+}
+
+ul.testimonialListV2 {
+	list-style: none;
+	width: 100%;
+	position: relative;
+	padding-right: 0;
+	& li {
+		background: none;
+		background-color: $testimonialBack;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	& blockquote p {
+		margin: 0 0 10px 0;
+		font-size: $basefontsize*14/12;
+		font-style: italic;
+		color: $blockquoteColor;
+		line-height: $baselineheight*24/12;
+		padding-left: 30px;
+		background: transparent url(/images/quote.png) no-repeat left 7px;
+	}
+	& cite {
+		padding-left: 25px;
+		font-family: $blockquoteFont;
+		font-style: italic;
+		font-size: $basefontsize;
+		// padding: 0;
+		// margin: 0;
+	}
+}

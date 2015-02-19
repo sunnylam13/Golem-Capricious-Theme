@@ -36,6 +36,13 @@ h1.title {
 	}
 }
 
+// use .clear before you use .line
+.clear {
+	clear:both;
+}
+
+// for the dividing line div to work you must first use div.clear (above) first... otherwise the div gets stuck within another element or div
+
 .line {
 	background: $horizontalLine;
 	height: 2px;
@@ -59,7 +66,8 @@ h1.title {
 	left: 22.5%;
 	padding-top: 3%;
 	padding-right: 10%;
-	@include column(9.5);
+	// for a perfect fit use column(9.5) however 10 provides more space
+	@include column(10);
 }
 
 ////////////////////////////////////////////
@@ -138,3 +146,11 @@ h1.title {
 
 
 // END LATEST WORK
+
+////////////////////////////////////////////
+// 		TESTIMONIALS
+////////////////////////////////////////////
+
+@import 'testimonials';
+
+// END TESTIMONIALS

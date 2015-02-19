@@ -21,6 +21,7 @@ $basefontfamily:'Open Sans', sans-serif;
 $introTextFamily: 'Droid Sans', sans-serif;
 $headingFontFamily: 'Amaranth', sans-serif;
 $sidebarNavFontFamily: 'Amaranth', sans-serif;
+$blockquoteFont: 'Droid Sans', sans-serif;
 
 // FONT COLOURS
 $sidebarNavFontColor: #fcfcfc;
@@ -29,6 +30,7 @@ $lite1Color: #688dad;
 $baseHoverColor: #ab4d63;
 $altHoverColorOption1: #ab4d63;
 $altHoverColorOption2: #959437;
+$blockquoteColor: #585858;
 
 // FONT SIZES
 $basefontsize:12px;
@@ -39,6 +41,7 @@ $baselineheight:12px;
 // BACKGROUND COLORS
 $basebackcolor: darken(white,2.5%);
 $sidebarNavBack: #653082;
+$testimonialBack: #f2f2f2;
 
 // BORDERS
 $sidebarBorderColor: rgba(0, 0, 0, 0.50);
@@ -78,3 +81,8 @@ a {
 .italicIt {
 	font-style: italic;
 }
+
+// cite {
+// 	font-family: $introTextFamily;
+// 	font-size: $basefontsize*.9;
+// }
