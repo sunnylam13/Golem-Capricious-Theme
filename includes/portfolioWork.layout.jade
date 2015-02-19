@@ -26,6 +26,46 @@
 	//- you can call a mixin within a mixin to reduce code duplication
 
 	//- ===================================
+	//- 1 COLUMN MIXINS
+	//- ===================================
+
+	mixin portfolioItemWeb1col
+		.portfolioItem.portWeb.full-monty
+			+portfolioItemBase
+
+	mixin portfolioItemPhoto1col
+		.portfolioItem.portPhoto.full-monty
+			+portfolioItemBase
+
+	mixin portfolioItemGraphic1col
+		.portfolioItem.portGraphic.full-monty
+			+portfolioItemBase
+
+	mixin portfolioItemVideo1col
+		.portfolioItem.portVideo.full-monty
+			+portfolioItemBase
+
+	//- ===================================
+	//- 2 COLUMN MIXINS
+	//- ===================================
+
+	mixin portfolioItemWeb2col
+		.portfolioItem.portWeb.one-half
+			+portfolioItemBase
+
+	mixin portfolioItemPhoto2col
+		.portfolioItem.portPhoto.one-half
+			+portfolioItemBase
+
+	mixin portfolioItemGraphic2col
+		.portfolioItem.portGraphic.one-half
+			+portfolioItemBase
+
+	mixin portfolioItemVideo2col
+		.portfolioItem.portVideo.one-half
+			+portfolioItemBase
+
+	//- ===================================
 	//- 3 COLUMN MIXINS
 	//- ===================================
 
@@ -45,6 +85,25 @@
 		.portfolioItem.portVideo.one-third
 			+portfolioItemBase
 
+	//- ===================================
+	//- 4 COLUMN MIXINS
+	//- ===================================
+
+	mixin portfolioItemWeb4col
+		.portfolioItem.portWeb.one-fourth
+			+portfolioItemBase
+
+	mixin portfolioItemPhoto4col
+		.portfolioItem.portPhoto.one-fourth
+			+portfolioItemBase
+
+	mixin portfolioItemGraphic4col
+		.portfolioItem.portGraphic.one-fourth
+			+portfolioItemBase
+
+	mixin portfolioItemVideo4col
+		.portfolioItem.portVideo.one-fourth
+			+portfolioItemBase
 
 	block portfolioList
 		//- .portfolioList

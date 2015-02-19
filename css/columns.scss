@@ -22,6 +22,10 @@
 // 		MAIN CODE
 ////////////////////////////////////////////
 
+.full-monty {
+	@include column(12);
+}
+
 .one-half {
 	@include column(6);
 }

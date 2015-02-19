@@ -60,10 +60,12 @@ h1.title {
 ///// 		CONTENT SECTION
 ///////////////////////////////////////////////
 
+// on the much higher resolution of Macbook Air 2014, the left: 22.7% causes the sidebar to overlap
+
 .content {
 	position: relative;
 	z-index: 10;
-	left: 22.5%;
+	left: 27%;
 	padding-top: 3%;
 	padding-right: 10%;
 	// for a perfect fit use column(9.5) however 10 provides more space

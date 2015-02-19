@@ -1,5 +1,21 @@
 extends portfolioWork.layout.jade
 
+//- By default this will be the portfolioWork.3col.jade
+
+//- ===================================
+//- VARIABLES
+//- ===================================
+
+//- you want to start these counter variables at 0
+- var webPortNo = 0
+- var photoPortNo = 0
+- var graphicPortNo = 0
+- var videoPortNo = 0
+
+
+//- ===================================
+//- MIXINS
+//- ===================================
 //- Please make sure that the snippet indenting is correct or it won't compile properly
 mixin portfolio3Col
 	.one-third
@@ -8,42 +24,48 @@ mixin portfolio3Col
 		else
 			p No content provided
 
+//- ===================================
+//- MAIN CODE
+//- ===================================
+
+//- Thursday, February 19, 2015 4:32 PM:  so far the while loops aren't working... it seems that calling mixins within the loops don't work
+//- there also isn't a for loop either
+
 block portfolioList
-	//- .portfolioList
-	//- 	+portfolioItemWeb
-	//- 	+portfolioItemWeb
-	//- 	+portfolioItemWeb
-	//- 	+portfolioItemWeb
-	//- 	+portfolioItemWeb
-	//- 	+portfolioItemPhoto
-	//- 	+portfolioItemPhoto
-	//- 	+portfolioItemPhoto
-	//- 	+portfolioItemPhoto
-	//- 	+portfolioItemGraphic
-	//- 	+portfolioItemGraphic
-	//- 	+portfolioItemGraphic
 	.portfolioList
-		portfolio3Col
-			+portfolioItemWeb
-		portfolio3Col
-			+portfolioItemWeb
-		portfolio3Col
-			+portfolioItemWeb
-		portfolio3Col
-			+portfolioItemWeb
-		portfolio3Col
-			+portfolioItemWeb
-		portfolio3Col
-			+portfolioItemPhoto
-		portfolio3Col
-			+portfolioItemPhoto
-		portfolio3Col
-			+portfolioItemPhoto
-		portfolio3Col
-			+portfolioItemPhoto
-		portfolio3Col
-			+portfolioItemGraphic
-		portfolio3Col
-			+portfolioItemGraphic
-		portfolio3Col
-			+portfolioItemGraphic
+		//- while webPortNo <= 5
+		//- 	+portfolioItemWeb3col
+		//- 	webPortNo++
+		//- while photoPortNo <= 4
+		//- 	+portfolioItemPhoto3col
+		//- 	photoPortNo++
+		//- while graphicPortNo <= 3
+		//- 	+portfolioItemGraphic3col
+		//- 	graphicPortNo++
+		//- while videoPortNo <= 0
+		//- 	+portfolioItemVideo3col
+		//- 	videoPortNo++
+		//- while webPortNo < 6
+		//- 	+portfolioItemWeb3col
+		//- 	webPortNo++
+		//- while photoPortNo < 5
+		//- 	+portfolioItemPhoto3col
+		//- 	photoPortNo++
+		//- while graphicPortNo < 4
+		//- 	+portfolioItemGraphic3col
+		//- 	graphicPortNo++
+		//- while videoPortNo < 1
+		//- 	+portfolioItemVideo3col
+		//- 	videoPortNo++
+		+portfolioItemWeb3col
+		+portfolioItemWeb3col
+		+portfolioItemWeb3col
+		+portfolioItemWeb3col
+		+portfolioItemWeb3col
+		+portfolioItemPhoto3col
+		+portfolioItemPhoto3col
+		+portfolioItemPhoto3col
+		+portfolioItemPhoto3col
+		+portfolioItemGraphic3col
+		+portfolioItemGraphic3col
+		+portfolioItemGraphic3col
