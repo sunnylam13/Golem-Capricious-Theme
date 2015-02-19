@@ -14,54 +14,77 @@
 	//- create a kind of dividing div
 	.clear
 	
+	//- we need to tag different items with web, photo, graphic, all
+	//- lets use portWeb, portPhoto, portGraphic, portfolioItem (for all) classes
+	//- we'll use Javascript to hide and show different ones
+
+	//- mixin portfolioItemBlock(class)
+	//- 	//- This won't work well because the argument can't be translated into a class
+	//- 	.portfolioItem.portWeb.class
+	//- 		img(src="http://lorempixel.com/221/174", alt="Lorem")
+	//- 		h3 Lorem ipsum.
+	//- 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+
+	mixin portfolioItemBase
+		img(src="http://lorempixel.com/221/174", alt="Lorem")
+		//- a(href='#')
+		//- 	h4 Lorem ipsum
+		h4
+			a(href='#') Lorem ipsum
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+
+	//- you can call a mixin within a mixin to reduce code duplication
+
+	mixin portfolioItemWeb
+		.portfolioItem.portWeb
+			+portfolioItemBase
+
+	mixin portfolioItemPhoto
+		.portfolioItem.portPhoto
+			+portfolioItemBase
+
+	mixin portfolioItemGraphic
+		.portfolioItem.portGraphic
+			+portfolioItemBase
+
+	//- mixin portfolioItemWeb
+	//- 	.portfolioItem.portWeb
+	//- 		img(src="http://lorempixel.com/221/174", alt="Lorem")
+	//- 		//- a(href='#')
+	//- 		//- 	h4 Lorem ipsum
+	//- 		h4
+	//- 			a(href='#') Lorem ipsum
+	//- 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+
+	//- mixin portfolioItemPhoto
+	//- 	.portfolioItem.portPhoto
+	//- 		img(src="http://lorempixel.com/221/174", alt="Lorem")
+	//- 		//- a(href='#')
+	//- 		//- 	h4 Lorem ipsum
+	//- 		h4
+	//- 			a(href='#') Lorem ipsum
+	//- 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+
+	//- mixin portfolioItemGraphic
+	//- 	.portfolioItem.portGraphic
+	//- 		img(src="http://lorempixel.com/221/174", alt="Lorem")
+	//- 		//- a(href='#')
+	//- 		//- 	h4 Lorem ipsum
+	//- 		h4
+	//- 			a(href='#') Lorem ipsum
+	//- 		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+
 	block portfolioList
 		.portfolioList
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-			.portfolioItem.web
-				img(src="http://lorempixel.com/221/174", alt="Lorem")
-				h3 Lorem ipsum.
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
-		
+			+portfolioItemWeb
+			+portfolioItemWeb
+			+portfolioItemWeb
+			+portfolioItemWeb
+			+portfolioItemWeb
+			+portfolioItemPhoto
+			+portfolioItemPhoto
+			+portfolioItemPhoto
+			+portfolioItemPhoto
+			+portfolioItemGraphic
+			+portfolioItemGraphic
+			+portfolioItemGraphic

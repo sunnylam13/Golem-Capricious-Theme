@@ -1,0 +1,76 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+ul.filtering-nav {
+	& li:first-child {
+		text-transform: uppercase;
+		font-size: $basefontsize;
+		font-family: $headingFontFamily;
+	}
+	& li {
+		list-style: none;
+		display: list-item;
+		width: auto;
+		// the display: inline-block on the a doesn't bring the buttons onto the same line because the "li" are still block elements... you have to change parent li elements into inline blocks too...
+		display: inline-block;
+		// to adjust the margins/spacing between the porfolio nav buttons I had to apply the margin changes to the li not the "a" this time
+		margin-left: 1%;
+		// margin-right: 2%;
+		& a {
+			@include portfolioButtonsV1;
+		}
+	}
+	// & li a {
+	// 	@include portfolioButtonsV1;
+	// }
+}
+
+.portfolioList {
+	margin-top: 5%;
+}
+
+.portfolioItem {
+	@include column(4);
+	& img {
+		border-radius: 3px;
+		margin-bottom: 5%;
+	}
+	& h4 a {
+		text-decoration: none;
+		font-family: $headingFontFamily;
+		color: $footerFontColor;
+		&:link {
+			color: $footerFontColor;
+		}
+		&:visited {
+			color: $footerFontColor;
+		}
+		&:hover {
+			color: $baseHoverColor;
+		}
+	}
+	& p {
+		font-family: $introTextFamily;
+	}
+}

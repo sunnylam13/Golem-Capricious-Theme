@@ -5,6 +5,13 @@
 	-ms-transition: all $time;
 }
 
+@mixin transitionEffectAllEaseIn ($time) {
+	-webkit-transition: all $time ease-in;
+	-moz-transition: all $time ease-in;
+	-o-transition: all $time ease-in;
+	-ms-transition: all $time ease-in;
+}
+
 @mixin subMenuBasic ($left,$top) {
 	// style the subMenu
 	width: 100%;
@@ -43,4 +50,30 @@
 	width: 25px;
 	height: 25px;
 	border: $carouselScrollBorder;
+}
+
+@mixin portfolioButtonsV1 {
+	color: $footerFontColor;
+	font-size: $basefontsize*13/12;
+	font-family: $headingFontFamily;
+	border-radius: 3px;
+	text-align: center;
+	background: #fff url(/images/button.png) repeat-x left top;
+	padding: 0 20px 0 20px;
+	line-height: $baselineheight*26/12;
+	height: 26px;
+	border: $carouselScrollBorder;
+	// want them on the same line
+	display: inline-block;
+	cursor: pointer;
+	@include transitionEffectAllEaseIn(200ms);
+	&:link {
+		color: $footerFontColor;
+	}
+	&:visited {
+		color: $footerFontColor;
+	}
+	&:hover {
+		color: $baseHoverColor;
+	}
 }
