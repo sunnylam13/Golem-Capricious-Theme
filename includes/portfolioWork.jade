@@ -1,1 +1,49 @@
 extends portfolioWork.layout.jade
+
+//- Please make sure that the snippet indenting is correct or it won't compile properly
+mixin portfolio3Col
+	.one-third
+		if block
+			block
+		else
+			p No content provided
+
+block portfolioList
+	//- .portfolioList
+	//- 	+portfolioItemWeb
+	//- 	+portfolioItemWeb
+	//- 	+portfolioItemWeb
+	//- 	+portfolioItemWeb
+	//- 	+portfolioItemWeb
+	//- 	+portfolioItemPhoto
+	//- 	+portfolioItemPhoto
+	//- 	+portfolioItemPhoto
+	//- 	+portfolioItemPhoto
+	//- 	+portfolioItemGraphic
+	//- 	+portfolioItemGraphic
+	//- 	+portfolioItemGraphic
+	.portfolioList
+		portfolio3Col
+			+portfolioItemWeb
+		portfolio3Col
+			+portfolioItemWeb
+		portfolio3Col
+			+portfolioItemWeb
+		portfolio3Col
+			+portfolioItemWeb
+		portfolio3Col
+			+portfolioItemWeb
+		portfolio3Col
+			+portfolioItemPhoto
+		portfolio3Col
+			+portfolioItemPhoto
+		portfolio3Col
+			+portfolioItemPhoto
+		portfolio3Col
+			+portfolioItemPhoto
+		portfolio3Col
+			+portfolioItemGraphic
+		portfolio3Col
+			+portfolioItemGraphic
+		portfolio3Col
+			+portfolioItemGraphic

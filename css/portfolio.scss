@@ -51,10 +51,12 @@ ul.filtering-nav {
 }
 
 .portfolioItem {
-	@include column(4);
+	// since we have portfolio pages that use 4 columns, 3, 2 and 1 we can't use @include column(4) here... we should apply our pre-made classes in columns.scss
+	// @include column(4);
 	& img {
 		border-radius: 3px;
 		margin-bottom: 5%;
+		max-width: 100%;
 	}
 	& h4 a {
 		text-decoration: none;
