@@ -18,25 +18,26 @@
 // font-family: 'Droid Sans', sans-serif;
 // $basefontfamily:'Amaranth', sans-serif;
 $basefontfamily:'Open Sans', sans-serif;
-$introTextFamily: 'Droid Sans', sans-serif;
-$headingFontFamily: 'Amaranth', sans-serif;
-$sidebarNavFontFamily: 'Amaranth', sans-serif;
 $blockquoteFont: 'Droid Sans', sans-serif;
 $blogPostFontFamily: 'Amaranth', sans-serif;
+$headingFontFamily: 'Amaranth', sans-serif;
+$introTextFamily: 'Droid Sans', sans-serif;
+$sidebarNavFontFamily: 'Amaranth', sans-serif;
 
 // FONT COLOURS
-$sidebarNavFontColor: #fcfcfc;
-$footerFontColor: #4a4a4a;
-$lite1Color: #688dad;
-$baseHoverColor: #ab4d63;
 $altHoverColorOption1: #ab4d63;
 $altHoverColorOption2: #959437;
+$baseFontColor: lighten(#653082,10%);
+$baseHoverColor: #ab4d63;
 $blockquoteColor: #585858;
 $blogDateColor: #6d6d6d;
 $blogHeadlineColor: #4a4a4a;
-$blogMetaColor: #575757;
 $blogLinkColor: #688dad;
+$blogMetaColor: #575757;
 $blogPageNavColor: #ab4d63;
+$footerFontColor: #4a4a4a;
+$lite1Color: #688dad;
+$sidebarNavFontColor: #fcfcfc;
 
 // FONT SIZES
 $basefontsize:12px;
@@ -46,14 +47,14 @@ $baselineheight:12px;
 
 // BACKGROUND COLORS
 $basebackcolor: darken(white,2.5%);
+$blogDateBack: #EEEEF6;
 $sidebarNavBack: #653082;
 $testimonialBack: #f2f2f2;
-$blogDateBack: #EEEEF6;
 
 // BORDERS
-$sidebarBorderColor: rgba(0, 0, 0, 0.50);
 $carouselScrollBorder: 1px solid #dbdbdb;
 $lite1Border: 1px dotted #688dad;
+$sidebarBorderColor: rgba(0, 0, 0, 0.50);
 
 // HORIZONTAL LINES
 // these use the background selector

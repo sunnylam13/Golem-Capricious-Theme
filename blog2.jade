@@ -6,12 +6,16 @@ block sidebarNav
 block contentHome
 	h1 Blog
 	include ./includes/introText.jade
+	.clear
+	.line
 	.primary
 		//- for these sidebar versions you must re-arrange them to be under a .primary which you will style
 		include ./includes/blogPostSegment.jade
 		include ./includes/pageNavBlog.jade
 	//- the sidebar uses .secondary; which is already within the jade code below; it has to stay outside of .primary
 	include ./includes/blogSidebarSegment.jade
+	.clear
+	.line
 
 block footer
 	include ./includes/footer.jade
