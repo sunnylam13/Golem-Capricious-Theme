@@ -71,6 +71,7 @@
 	display: inline-block;
 	cursor: pointer;
 	@include transitionEffectAllEaseIn(200ms);
+	//:hover must always be last for pseudo selectors
 	&:link {
 		color: $footerFontColor;
 	}
@@ -116,6 +117,43 @@
 	// setting the line height to 1 allows us to align the text with the central axis of the icons they're beside
 	line-height: 1;
 	padding-right: 5px;
+}
+
+@mixin buttonShowcaseFactor ($backColor,$borderColor) {
+	background-color: $backColor;
+	border: 1px solid $borderColor;
+	color: #FFF;
+	&:hover {
+		background: $altHoverBackColOne;
+	}
+}
+
+@mixin boxesShowCaseFactorV1 ($backColor,$borderColor,$color) {
+	background-color: $backColor;
+	border: 1px solid $borderColor;
+	color: $color;
+	clear: both;
+	margin: 10px 0;
+	text-shadow: none;
+	padding: 15px 13px 15px 15px;
+	line-height: $baselineheight*17/12;
+}
+
+// because the example we modelled is using a monochromatic color set we just make one colour darker and darker
+// background color is the base color and the lightest
+@mixin boxesShowCaseFactorV2 ($baseColor) {
+	border-radius: 3px;
+	background-color: $baseColor;
+	border: 1px solid darken($baseColor,5%);
+	color: darken($baseColor,10%);
+	clear: both;
+	margin: 10px 0;
+	text-shadow: none;
+	padding: 15px 15px 13px 15px;
+	line-height: $baselineheight*17/12;
+	font-size: $basefontsize;
+	display: inline-block;
+	width: 100%;
 }
 
 ////////////////////////////////////////////

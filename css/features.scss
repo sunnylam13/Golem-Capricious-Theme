@@ -1,0 +1,82 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+section.featuresOne {
+	margin: 0;
+	padding: 0;
+	// BUTTONS
+	& a.button {
+		@include portfolioButtonsV1;
+		margin-bottom: 20px;
+		margin-right: 5px;
+		// changed line height to centre it vertically
+		line-height: $baselineheight*23/12;
+	}
+	& a.button.red {
+		@include buttonShowcaseFactor (#cb4b4b,#ba3d3d);
+	}
+	& a.button.brown {
+		@include buttonShowcaseFactor (#a49571,#877a5c);
+	}
+	& a.button.purple {
+		@include buttonShowcaseFactor (#9471a4,#7b558c);
+	}
+	& a.button.green {
+		@include buttonShowcaseFactor (green,darken(green,25%));
+	}
+	& a.button.blue {
+		@include buttonShowcaseFactor (blue,darken(blue,25%));
+	}
+	// BOXES
+	& .info-box {
+		@include boxesShowCaseFactorV2(blue);
+	}
+	& .warning-box {
+		@include boxesShowCaseFactorV2(red);
+		// float: right;
+	}
+	& .download-box {
+		@include boxesShowCaseFactorV2(green);
+	}
+	& .note-box {
+		@include boxesShowCaseFactorV2(yellow);
+		// float: right;
+	}
+	& .clear {
+		// margin-top: 3%;
+	}
+	// IMAGES
+	& img.left.round {
+		float: left;
+		margin: 3% 3% 3% 0%;
+	}
+	& img.right.round {
+		float: right;
+		margin: 3% 0% 3% 3%;
+	}
+	& img.center.round {
+		display: block;
+		margin: 3% auto;
+	}
+}

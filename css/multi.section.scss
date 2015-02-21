@@ -24,7 +24,7 @@
 
 h1.title {
 	padding: 0;
-	font-size: $basefontsize*1.6;
+	font-size: $basefontsize*1.8;
 	font-weight: 900px;
 }
 
@@ -48,6 +48,10 @@ h1.title {
 	height: 2px;
 	padding: 20px 0 0 0;
 	color: $sidebarNavFontColor;
+}
+
+.round {
+	border-radius: 3px;
 }
 
 ////////////////////////////////////////////

@@ -4,30 +4,43 @@ block sidebarNav
 	include ./includes/sidebarNav.jade
 
 block contentHome
-	h1 Buttons, Boxes and Images
-	include ./includes/introText.jade
-	h3 Buttons
-	p You can use any colour button in buttons.
-	a(href="#") Button
-	a(href="#") Red
-	a(href="#") Brown
-	a(href="#") Purple
-	a(href="#") Green
-	a(href="#") Blue
-	.line
-	h3 Boxes
-	.info-box This is an information box.
-	.warning-box This is a warning box.
-	.download-box This is a download box.
-	.note-box This is a note box.
-	.line
-	h3 Images
-	img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='left round')
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi et, ullam eos cupiditate esse quidem aperiam necessitatibus voluptate eveniet quas ipsum tenetur accusantium, velit fugiat beatae cumque assumenda. Debitis, quidem!
-	img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='right round')
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi et, ullam eos cupiditate esse quidem aperiam necessitatibus voluptate eveniet quas ipsum tenetur accusantium, velit fugiat beatae cumque assumenda. Debitis, quidem!
-	img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='center round')
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi et, ullam eos cupiditate esse quidem aperiam necessitatibus voluptate eveniet quas ipsum tenetur accusantium, velit fugiat beatae cumque assumenda. Debitis, quidem!
+	section.featuresOne
+		h1.title Buttons, Boxes and Images
+		.clear
+		.line
+		include ./includes/introText.jade
+		h3 Buttons
+		p You can use any colour button in buttons.
+		a(href="#",class='button') Button
+		a(href="#",class='button red') Red Button
+		a(href="#",class='button brown') Brown Button
+		a(href="#",class='button purple') Purple Button
+		a(href="#",class='button green') Green Button
+		a(href="#",class='button blue') Blue Button
+		.clear
+		.line
+		h3 Boxes
+		//- If you use .info-box.one-half it screws up the alignment
+		//- the .info-box must be within the .one-half div
+		.one-half.leftFlush 
+			.info-box This is an information box.
+		.one-half.last
+			.warning-box This is a warning box.
+		.one-half.leftFlush 
+			.download-box This is a download box.
+		.one-half.last
+			.note-box This is a note box.
+		.clear
+		.line
+		h3 Images
+		img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='left round')
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dicta tempore ab facilis tempora quod beatae nulla et cum ut, adipisci porro. Odio, aliquam quibusdam. Eligendi optio eius deserunt eaque animi qui, tempore reprehenderit recusandae quis explicabo, beatae earum placeat dolorem consectetur veniam atque vero fugiat ut exercitationem deleniti inventore. Earum laboriosam nesciunt sapiente repudiandae ut obcaecati esse et doloremque voluptas neque. Excepturi id veniam, aliquam architecto. Molestiae aperiam velit placeat nesciunt perspiciatis aut excepturi quos nobis, quod sequi! Alias dolores, accusantium fuga quae, earum eligendi voluptatem nam quo harum et optio iusto eius amet magnam iste eos voluptatum sequi.
+		img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='right round')
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ex nisi itaque qui. Aspernatur praesentium, quaerat cum temporibus minima, nesciunt obcaecati, tempore non porro deleniti dicta, nisi quae illo mollitia voluptatum neque! Eos reiciendis harum commodi deserunt similique, quisquam fugiat quo quae earum non laudantium modi fugit deleniti, voluptates nesciunt nisi animi sapiente sit aperiam laboriosam repellendus! Sapiente ex ullam corporis corrupti architecto quasi. Earum quidem sequi ex incidunt illum unde repellat minus accusamus optio nihil, tenetur non, officia ducimus expedita totam accusantium nam facere tempore asperiores dolorem, libero necessitatibus praesentium atque. Est voluptatibus, eaque fugit voluptatum debitis repellat dignissimos quia. Voluptatem tenetur, quas aut deleniti atque provident quos sed laudantium dolorum ipsam inventore hic, id dolor eligendi aperiam maiores beatae nihil, vero rem nostrum velit ullam in officia quibusdam? Sequi molestias atque eveniet molestiae. Vero quos ipsam labore voluptatibus, tempora, necessitatibus iste sequi illo neque consequuntur, molestias minima atque.
+		img(src="http://lorempixel.com/162/120", alt="Lorem Picture",class='center round')
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe ex nisi itaque qui. Aspernatur praesentium, quaerat cum temporibus minima, nesciunt obcaecati, tempore non porro deleniti dicta, nisi quae illo mollitia voluptatum neque! Eos reiciendis harum commodi deserunt similique, quisquam fugiat quo quae earum non laudantium modi fugit deleniti, voluptates nesciunt nisi animi sapiente sit aperiam laboriosam repellendus! Sapiente ex ullam corporis corrupti architecto quasi. Earum quidem sequi ex incidunt illum unde repellat minus accusamus optio nihil, tenetur non, officia ducimus expedita totam accusantium nam facere tempore asperiores dolorem, libero necessitatibus praesentium atque. Est voluptatibus, eaque fugit voluptatum debitis repellat dignissimos quia. Voluptatem tenetur, quas aut deleniti atque provident quos sed laudantium dolorum ipsam inventore hic, id dolor eligendi aperiam maiores beatae nihil, vero rem nostrum velit ullam in officia quibusdam? Sequi molestias atque eveniet molestiae. Vero quos ipsam labore voluptatibus, tempora, necessitatibus iste sequi illo neque consequuntur, molestias minima atque.
+		.clear
+		.line
 
 block footer
 	include ./includes/footer.jade
