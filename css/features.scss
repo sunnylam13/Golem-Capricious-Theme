@@ -58,6 +58,7 @@ section.featuresOne {
 	}
 	& .download-box {
 		@include boxesShowCaseFactorV2(green);
+		margin-bottom: 5%;
 	}
 	& .note-box {
 		@include boxesShowCaseFactorV2(yellow);
@@ -69,11 +70,11 @@ section.featuresOne {
 	// IMAGES
 	& img.left.round {
 		float: left;
-		margin: 3% 3% 3% 0%;
+		margin: 0 3% 3% 0;
 	}
 	& img.right.round {
 		float: right;
-		margin: 3% 0% 3% 3%;
+		margin: 0 0 3% 3%;
 	}
 	& img.center.round {
 		display: block;
