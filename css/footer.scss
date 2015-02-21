@@ -46,11 +46,14 @@
 			color: $footerFontColor;
 		}
 		&:hover {
-			color: $footerFontColor;
+			color: $baseHoverColor;
 		}
 	}
 	& li > a > h5 {
 		font-size: $basefontsize*1.2;
+		&:hover {
+			color: $baseHoverColor;
+		}
 	}
 	& li > p {
 		font-size: $basefontsize*0.85;

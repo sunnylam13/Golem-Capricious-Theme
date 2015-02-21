@@ -1,0 +1,121 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+.blogPost {
+	& a img {
+		display: block;
+		// margin: 0 auto;
+		margin-bottom: 2.5%;
+		max-width: 75%;
+	}
+	& .info {
+		display: block;
+		@include column(12);
+		margin-bottom: 3%;
+	}
+	& .date {
+		background: $blogDateBack;
+		border-radius: 50%;
+		display: inline-block;
+		width: 55px;
+		height: 55px;
+		float: left;
+		font-family: $blogPostFontFamily;
+		color: $blogDateColor;
+		// use some padding to help centre the date in the middle of the circle
+		// or increase the size of the circle
+		// padding-left: 1.75%;
+		// padding: 1%;
+		// padding:5px 5px 5px 5px;
+		padding-right: 3px;
+		padding-top: 5px;
+		font-style: italic;
+		margin-right: 15px;
+		text-align: center;
+		& .day {
+			font-size: $baselineheight*1.8;
+		}
+		& .month {
+			text-transform: uppercase;
+			font-size: $baselineheight*1.1;
+		}
+	}
+	& .meta {
+		display: block;
+		& h3.title a {
+			color: $blogHeadlineColor;
+		}
+		& .comments {
+			& a {
+				@include blogMetaDataFormat;
+				padding-left: 2.5%;
+				&:hover {
+					color: $baseHoverColor;
+				}
+				background: transparent url(/images/icon-comment.png) no-repeat left top;
+			}
+		}
+		& .tags {
+			display: inline;
+			& a {
+				@include blogMetaDataFormat;
+				&:hover {
+					color: $baseHoverColor;
+				}
+				&:first-child {
+					margin-left: 2%;
+					padding-left: 2.5%;
+					background: transparent url(/images/icon-cat.png) no-repeat left top;
+				}
+			}
+		}
+		& p {
+			display: block;
+		}
+	}
+	& .summary {
+		& a {
+			color: $blogLinkColor;
+			font-style: italic;
+			font-weight: 500;
+			font-family: $blogPostFontFamily;
+			font-size: $basefontsize*1.1;
+			&:visited {
+				color: $blogLinkColor;
+			}
+			&:link {
+				color: $blogLinkColor;
+			}
+			&:hover {
+				color: $baseHoverColor;
+			}
+		}
+	}
+}
+
+
+
+
+
+

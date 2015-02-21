@@ -36,6 +36,7 @@
 	}
 	& .socialMediaIcons {
 		padding-top: 20%;
+		margin-bottom: 20%;
 		& ul {
 			text-align: left;
 			& li {
@@ -67,6 +68,49 @@
 			}
 		}
 	}
+
+	////////////////////////////////////////////
+	///// 		BLOG SEARCH BOX
+	///////////////////////////////////////////////
+	
+	.blogSearchBox {
+		font-weight: bold;
+		font-family: $headingFontFamily;
+		& form {
+			position: relative;
+			& i.fa {
+				color: $sidebarNavFontColor;
+				position: absolute;
+				right: 11px;
+				top: 9px;
+			}
+		}
+		& h3 {
+			color: $sidebarNavFontColor;
+			display: block;
+			margin-bottom: 0;
+			margin-bottom: 2%;
+		}
+		& input {
+			margin-top: 2%;
+			color: $sidebarNavFontColor;
+			padding: 3% 2% 4% 4%;
+			font-size: $basefontsize*0.98;
+			font-style: italic;
+			width: 100%;
+			background: darken($sidebarNavBack,10%);
+			border: 0;
+			@include blogSearchBoxBorderSet1(black,black,#CCC,#CCC);
+			// &:focus {
+			// 	@include blogSearchBoxBorderSet1(black,black,#CCC,#CCC);
+			// }
+		}
+	}
+
+	////////////////////////////////////////////
+	///// 		SUBMENU STYLING
+	///////////////////////////////////////////////
+
 	// & .subMenuMain {
 	// 	// style the subMenu
 	// 	width: 100%;

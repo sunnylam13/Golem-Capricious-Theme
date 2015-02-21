@@ -22,6 +22,7 @@ $introTextFamily: 'Droid Sans', sans-serif;
 $headingFontFamily: 'Amaranth', sans-serif;
 $sidebarNavFontFamily: 'Amaranth', sans-serif;
 $blockquoteFont: 'Droid Sans', sans-serif;
+$blogPostFontFamily: 'Amaranth', sans-serif;
 
 // FONT COLOURS
 $sidebarNavFontColor: #fcfcfc;
@@ -31,6 +32,10 @@ $baseHoverColor: #ab4d63;
 $altHoverColorOption1: #ab4d63;
 $altHoverColorOption2: #959437;
 $blockquoteColor: #585858;
+$blogDateColor: #6d6d6d;
+$blogHeadlineColor: #4a4a4a;
+$blogMetaColor: #575757;
+$blogLinkColor: #688dad;
 
 // FONT SIZES
 $basefontsize:12px;
@@ -42,6 +47,7 @@ $baselineheight:12px;
 $basebackcolor: darken(white,2.5%);
 $sidebarNavBack: #653082;
 $testimonialBack: #f2f2f2;
+$blogDateBack: #EEEEF6;
 
 // BORDERS
 $sidebarBorderColor: rgba(0, 0, 0, 0.50);
@@ -79,6 +85,8 @@ $sidebarNavPadding: 8% 4% 8% 4%;
 	padding-left: 30px;
 	background: transparent url(/images/quote.png) no-repeat left 7px;
 }
+
+
 
 ////////////////////////////////////////////
 // 		MAIN CODE

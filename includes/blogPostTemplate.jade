@@ -3,19 +3,30 @@
 ////////////////////////////////////////////
 
 .blogPost
-	img(src="http://lorempixel.com/702/383", alt="Blog Post Image")
-	.date
-		.day 13
-		.month Jan
-	.meta
-		.title
-			a(href="#") How To Write Compelling Copy
+	a(href="post.html")
+		//- If I'm using max-width then even a large image is changed easy.  Skip this version.
+		//- img(src="http://lorempixel.com/702/383", alt="Blog Post Image")
+		img(src="http://lorempixel.com/1200/780", alt="Blog Post Image")
+	.info
+		.date
+			.day 13
+			.month Jan
+		.meta
+			h3.title
+				a(href="#") How To Write Compelling Copy
+				//- Still need to supply a link to post.html
+			.comments
+				a(href="#") 17 Comments
+			.tags
+				a(href="#",class='firstTag') marketing, 
+				a(href="#") journal, 
+				a(href="#") copywriting
+	.summary
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui error, quaerat, unde dolore modi ipsum architecto recusandae aperiam. Accusamus blanditiis, magni at minus velit doloribus, assumenda tenetur impedit iusto consequuntur voluptates nobis excepturi tempore, iure quo earum esse nulla saepe veritatis praesentium. Impedit accusantium, non aspernatur cupiditate perferendis esse. 
+			a(href="post.html") Continue reading...
 			//- Still need to supply a link to post.html
-		.comments
-			a(href="#") 17 Comments
-		.tags
-			a(href="#") marketing, journal, copywriting
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam qui error, quaerat, unde dolore modi ipsum architecto recusandae aperiam. Accusamus blanditiis, magni at minus velit doloribus, assumenda tenetur impedit iusto consequuntur voluptates nobis excepturi tempore, iure quo earum esse nulla saepe veritatis praesentium. Impedit accusantium, non aspernatur cupiditate perferendis esse. 
-		a(href="#") Continue reading...
-		//- Still need to supply a link to post.html
+
+.clear
+.line
+
 // END BLOG POST

@@ -1,3 +1,7 @@
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
 @mixin transitionEffectAll ($time) {
 	-webkit-transition: all $time;
 	-moz-transition: all $time;
@@ -94,6 +98,30 @@
 	}
 }
 
+@mixin blogSearchBoxBorderSet1 ($topS,$leftS,$bottomS,$rightS) {
+	border-left: 1px solid $leftS;
+	border-top: 1px solid $topS;
+	border-right: 1px solid $rightS;
+	border-bottom: 1px solid $bottomS;
+}
+
+@mixin blogMetaDataFormat {
+	color: $blogMetaColor;
+	font-style: italic;
+	font-family: $blogPostFontFamily;
+	font-size: $basefontsize;
+	float: left;
+	// display: inline-block;
+	// padding-left: 2.5%;
+	// setting the line height to 1 allows us to align the text with the central axis of the icons they're beside
+	line-height: 1;
+	padding-right: 5px;
+}
+
+////////////////////////////////////////////
+///// 		MAIN CODE
+///////////////////////////////////////////////
+
 .buttonBlue {
 	@include portfolioButtonsV1;
 	background: $sidebarNavBack;
@@ -108,3 +136,4 @@
 		background: $altHoverColorOption2;
 	}
 }
+

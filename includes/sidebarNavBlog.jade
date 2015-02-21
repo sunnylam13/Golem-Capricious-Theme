@@ -6,5 +6,7 @@ block blogSearchBox
 	// ===================================
 	// This only appears when the blog page comes up.
 	.blogSearchBox
-		label Search
-		input(type='text',name='blogSearch',placeholder='type and hit enter')
+		h3 Search
+		form(method="get", action="",class='searchForm')
+			input(type='text',name='blogSearch',placeholder='type and hit enter')
+			i.fa.fa-search
