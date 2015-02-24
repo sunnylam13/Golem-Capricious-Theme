@@ -33,6 +33,7 @@ h1.title {
 	font-style: italic;
 	& p {
 		font-size: $basefontsize*1.4;
+		color: darken($sidebarNavFontColor,60%);
 	}
 }
 
@@ -177,3 +178,12 @@ h1.title {
 }
 
 // END FEATURES
+
+////////////////////////////////////////////
+// 		BUTTONS AND JAVASCRIPT
+////////////////////////////////////////////
+
+.active {
+	color: $activeJSColor;
+}
+

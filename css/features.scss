@@ -208,6 +208,28 @@ section.featuresTwo {
 		}
 	}
 
+	& span.cross {
+		display: inline-block;
+		text-align: center;
+	}
+
+	& .cross {
+		background: transparent url(/images/cross.png) no-repeat center left;
+		width: 10px;
+		height: 10px;
+	}
+
+	& span.check-icon {
+		display: inline-block;
+		text-align: center;
+	}
+
+	& .check-icon {
+		background: transparent url(/images/check-table.png) no-repeat center left;
+		width: 12px;
+		height: 10px;
+	}
+
 }
 
 ////////////////////////////////////////////
@@ -257,6 +279,7 @@ section.featuresTwo {
 		display: block;
 		clear: both;
 		background: url(/images/codebg.jpg) repeat;
+		// background: lightgrey repeat;
 		line-height: $baselineheight*20/12;
 		font-size: $basefontsize;
 		border: $carouselScrollBorder;
@@ -273,12 +296,13 @@ section.featuresTwo {
 // 		SERVICE ICONS PAGE
 ////////////////////////////////////////////
 
-.content.one-half h3 img {
+.serviceIconsPage h3 img {
 	vertical-align: middle;
 	// margin right often doesn't work
 	// in those cases use padding
 	padding-right: 10px;
-	display: inline;
+	display: inline-block;
+	border-radius: 3px;
 }
 
 // END SERVICE ICONS PAGE

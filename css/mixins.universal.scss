@@ -205,6 +205,20 @@
 	padding-left: 3%;
 }
 
+@mixin contactFormFieldBaseV1 {
+	@include column(10);
+	color: $contactFormColor;
+	height: 2em;
+	border-radius: 3px;
+	border: $contactFormBorder;
+	margin-bottom: 2%;
+	background: $contactFormFieldBack;
+	font-family: $contactFormFamily;
+	padding: 5px 10px;
+	// remove the ability to resize
+	resize: none;
+}
+
 ////////////////////////////////////////////
 ///// 		MAIN CODE
 ///////////////////////////////////////////////

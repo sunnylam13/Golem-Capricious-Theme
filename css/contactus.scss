@@ -1,0 +1,59 @@
+////////////////////////////////////////////
+// 		SETUP STUFF
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		IMPORTS
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+///// 		MIXINS
+///////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////
+
+.contactUsPrimeBlock {
+	margin: 0;
+	padding: 0;
+	& iframe {
+		margin-bottom: 3%;
+	}
+}
+
+.forms {
+	margin-bottom: 5%;
+	& label {
+		display: block;
+		float: left;
+		// width: 13%;
+		@include column(2);
+		padding-top: 8px;
+		font-size: $basefontsize*13/12;
+		clear: both;
+	}
+	& fieldset {
+		& .text-input {
+			@include contactFormFieldBaseV1;
+		}
+		& .text-area {
+			@include contactFormFieldBaseV1;
+			height: 16em;
+		}
+	}
+	& .btn-submit {
+		@include portfolioButtonsV1;
+		margin-left: 17.5%;
+		height: 28px;
+		padding: 0 25px 0 25px;
+	}
+}

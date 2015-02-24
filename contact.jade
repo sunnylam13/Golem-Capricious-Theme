@@ -4,73 +4,81 @@ block sidebarNav
 	include ./includes/sidebarNav.jade
 
 block contentHome
-	h1 Get In Touch
-	include ./includes/introText.jade
-	//- insert Google Map code here
-	////////////////////////////////////////////
-	// 		GOOGLE MAP
-	////////////////////////////////////////////
-	iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5774.865505383171!2d-79.38218913627858!3d43.639163990563155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b352a8a12d2c9%3A0x747fe307c5654095!2sHarbourfront+Centre!5e0!3m2!1sen!2sus!4v1424234009860", width="800", height="600", frameborder="0", style="border:0")
+	.contactUsPrimeBlock
+		h1.title Get In Touch
+		.clear
+		.line
+		include ./includes/introText.jade
+		//- insert Google Map code here
+		////////////////////////////////////////////
+		// 		GOOGLE MAP
+		////////////////////////////////////////////
+		iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5774.865505383171!2d-79.38218913627858!3d43.639163990563155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b352a8a12d2c9%3A0x747fe307c5654095!2sHarbourfront+Centre!5e0!3m2!1sen!2sus!4v1424234009860", width="800", height="400", frameborder="0", style="border:0")
 
-	// END GOOGLE MAP
-	br
-	h3 Lorem ipsum dolor sit.
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat officia, perferendis voluptate rerum. Temporibus ipsa, doloribus vel maiores eum repellat omnis eaque enim quod totam, iusto numquam tempore aliquam quae!
-	br
-	
-	////////////////////////////////////////////
-	// 		FORM
-	////////////////////////////////////////////
-	form(id="contactForm",class='forms', method="post", action="./php/pylpemail.php")
-		fieldset
-			ol
-				li.form-row.text-input-row
-					label Name
-					input(
-						type='text',
-						name='name',
-						class = 'text-input',
-						required)
-				li.form-row.text-input-row
-					label Email
-					input(
-						type='text',
-						name='email',
-						class = 'text-input',
-						required)
-				li.form-row.text-input-row
-					label Phone
-					input(
-						type='text',
-						name='phone',
-						class = 'text-input')
-				li.form-row.text-input-row
-					label Subject
-					input(
-						type='text',
-						name='subject',
-						class = 'text-input',
-						required)
-				li.form-row.text-area-row
-					label Message
-					input(
-						type='text',
-						name='message',
-						class = 'text-input',
-						required)
-				li.form-row.hidden-row
-					input(
-						type='hidden',
-						name='hidden',
-						value)
-				li.button-row
-					input(
-						type='submit',
-						value='Submit',
-						name='submit',
-						class='btn-submit')
+		// END GOOGLE MAP
+		br
+		h3 Lorem ipsum dolor sit.
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat officia, perferendis voluptate rerum. Temporibus ipsa, doloribus vel maiores eum repellat omnis eaque enim quod totam, iusto numquam tempore aliquam quae!
+		br
+		
+		////////////////////////////////////////////
+		// 		FORM
+		////////////////////////////////////////////
+		form(id="contactForm",class='forms', method="post", action="./php/pylpemail.php")
+			fieldset
+				ol
+					li.form-row.text-input-row
+						label Name
+						input(
+							type='text',
+							name='name',
+							class = 'text-input',
+							required)
+					li.form-row.text-input-row
+						label Email
+						input(
+							type='text',
+							name='email',
+							class = 'text-input',
+							required)
+					li.form-row.text-input-row
+						label Phone
+						input(
+							type='text',
+							name='phone',
+							class = 'text-input')
+					li.form-row.text-input-row
+						label Subject
+						input(
+							type='text',
+							name='subject',
+							class = 'text-input',
+							required)
+					li.form-row.text-area-row
+						label Message
+						textarea(
+							type='text',
+							name='message',
+							class = 'text-area',
+							required)
+					li.form-row.hidden-row
+						input(
+							type='hidden',
+							name='hidden',
+							value)
+					li.button-row
+						input(
+							type='submit',
+							value='Submit',
+							name='submit',
+							class='btn-submit')
 
-	// END FORM
+		// END FORM
+
+		//- .clear
+		//- .line
+		//- .clear
+		//- .line
 
 block footer
 	include ./includes/footer.jade
