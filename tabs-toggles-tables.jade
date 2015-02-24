@@ -1,178 +1,185 @@
+//- ===================================
+//- MIXINS
+//- ===================================
+
+mixin tabContentBlockBase
+	h4 Lorem ipsum.
+	img(src="http://lorempixel.com/163/121", alt="Lorem Picture", class='left round')
+	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem adipisci mollitia amet reprehenderit vitae ea quos necessitatibus quae provident libero, doloribus assumenda excepturi doloremque officiis praesentium nemo, eius possimus nihil. Odio exercitationem minima officiis iure blanditiis illo dolorum impedit harum magnam, provident praesentium adipisci dicta quam quis porro. Assumenda, iusto.
+
+mixin toggleBlockBase
+	.toggle
+		h2.trigger + Click to Title
+		.toggleBox
+			.toggleHold
+				h4 Lorem ipsum.
+				img(src="http://lorempixel.com/163/121", alt="Lorem Picture", class='left round')
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem adipisci mollitia amet reprehenderit vitae ea quos necessitatibus quae provident libero, doloribus assumenda excepturi doloremque officiis praesentium nemo, eius possimus nihil. Odio exercitationem minima officiis iure blanditiis illo dolorum impedit harum magnam, provident praesentium adipisci dicta quam quis porro. Assumenda, iusto.
+
+//- ===================================
+
 extends ./index.layout.jade
 
 block sidebarNav
 	include ./includes/sidebarNav.jade
 
 block contentHome
-	h1 Buttons, Boxes and Images
-	include ./includes/introText.jade
-	
-	////////////////////////////////////////////
-	// 		TABBED CONTENT
-	////////////////////////////////////////////
-	h3 Tabs
-	ul.tabs
-		li
-			a(href="#tab1") This is
-		li
-			a(href="#tab2") Tabbed
-		li
-			a(href="#tab3") Content
-	.tab-container
-		#tab1.tab_content
-			h4 Lorem ipsum.
-			p
-				img(src="http://lorempixel.com/163/121", alt="Lorem Picture", class='left round')
-				| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem adipisci mollitia amet reprehenderit vitae ea quos necessitatibus quae provident libero, doloribus assumenda excepturi doloremque officiis praesentium nemo, eius possimus nihil. Odio exercitationem minima officiis iure blanditiis illo dolorum impedit harum magnam, provident praesentium adipisci dicta quam quis porro. Assumenda, iusto.
-		#tab2.tab_content
-			h4 Lorem ipsum.
-			p
-				img(src="http://lorempixel.com/163/121", alt="Lorem Picture", class='left round')
-				| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem adipisci mollitia amet reprehenderit vitae ea quos necessitatibus quae provident libero, doloribus assumenda excepturi doloremque officiis praesentium nemo, eius possimus nihil. Odio exercitationem minima officiis iure blanditiis illo dolorum impedit harum magnam, provident praesentium adipisci dicta quam quis porro. Assumenda, iusto.
-		#tab2.tab_content
-			h4 Lorem ipsum.
-			p
-				img(src="http://lorempixel.com/163/121", alt="Lorem Picture", class='left round')
-				| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem adipisci mollitia amet reprehenderit vitae ea quos necessitatibus quae provident libero, doloribus assumenda excepturi doloremque officiis praesentium nemo, eius possimus nihil. Odio exercitationem minima officiis iure blanditiis illo dolorum impedit harum magnam, provident praesentium adipisci dicta quam quis porro. Assumenda, iusto.
-	
-	// END TABBED CONTENT
+	section.featuresTwo
+		//- Don't forget to apply the .title to h1 to get the size right
+		h1.title Tabs, Toggles and Tables
+		.clear
+		.line
+		include ./includes/introText.jade
+		
+		////////////////////////////////////////////
+		// 		TABBED CONTENT
+		////////////////////////////////////////////
+		h3 Tabs
+		ul.tabs
+			li
+				a(href="javascript:void(0)",id='#tab1') This is
+			li
+				a(href="javascript:void(0)",id='#tab2') Tabbed
+			li
+				a(href="javascript:void(0)",id='#tab3') Content
+		.tab-container
+			#tab1.tab_content
+				+tabContentBlockBase
+			#tab2.tab_content
+				+tabContentBlockBase
+			#tab2.tab_content
+				+tabContentBlockBase
+		
+		// END TABBED CONTENT
 
-	.line
+		.clear
+		.line
 
-	////////////////////////////////////////////
-	// 		TOGGLED CONTENT
-	////////////////////////////////////////////
-	h3 Toggles
-	.toggle
-		h2.trigger
-		.toggleBox
-			.toggleHold
-				h4 Lorem ipsum.
-				p
-					img(src="http://lorempixel.com/163/121", alt="Lorem Picture", class='left round')
-					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem adipisci mollitia amet reprehenderit vitae ea quos necessitatibus quae provident libero, doloribus assumenda excepturi doloremque officiis praesentium nemo, eius possimus nihil. Odio exercitationem minima officiis iure blanditiis illo dolorum impedit harum magnam, provident praesentium adipisci dicta quam quis porro. Assumenda, iusto.
-	.toggle
-		h2.trigger
-		.toggleBox
-			.toggleHold
-				h4 Lorem ipsum.
-				p
-					img(src="http://lorempixel.com/163/121", alt="Lorem Picture", class='left round')
-					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem adipisci mollitia amet reprehenderit vitae ea quos necessitatibus quae provident libero, doloribus assumenda excepturi doloremque officiis praesentium nemo, eius possimus nihil. Odio exercitationem minima officiis iure blanditiis illo dolorum impedit harum magnam, provident praesentium adipisci dicta quam quis porro. Assumenda, iusto.
+		////////////////////////////////////////////
+		// 		TOGGLED CONTENT
+		////////////////////////////////////////////
+		h3 Toggles
+		+toggleBlockBase
+		+toggleBlockBase
 
 
-	// END TOGGLED CONTENT
+		// END TOGGLED CONTENT
 
-	.line
+		.clear
+		.line
 
-	////////////////////////////////////////////
-	// 		TABLE CONTENT
-	////////////////////////////////////////////
+		////////////////////////////////////////////
+		// 		TABLE CONTENT
+		////////////////////////////////////////////
 
-	// Begin Table 1
-	h2 Table 1
-	table
-		tbody
-			tr
-				//- This row is for setting up the table headers.
-				th
-					h4 Table Header 1
-				th
-					h4 Table Header 2
-				th.center
-					h4 Centred Header 3
-			tr
-				td Division 1
-				td Division 2
-				td.center Division 3
-			tr.even
-				td Division 1
-				td Division 2
-				td.center Division 3
-			tr
-				td Division 1
-				td Division 2
-				td.center Division 3
-	// End Table 1
+		// Begin Table 1
+		h2 Table 1
+		table
+			tbody
+				tr
+					//- This row is for setting up the table headers.
+					th
+						h4 Table Header 1
+					th
+						h4 Table Header 2
+					th.center
+						h4 Centred Header 3
+				tr
+					td Division 1
+					td Division 2
+					td.center Division 3
+				tr.even
+					td Division 1
+					td Division 2
+					td.center Division 3
+				tr
+					td Division 1
+					td Division 2
+					td.center Division 3
+		// End Table 1
 
-	.line
+		.clear
+		.line
 
-	// Begin Table 2
-	h2 Table 2
-	table
-		tbody
-			tr.border_bottom
-				td 
-					&nbsp;
-				td
-					h4 Free
-				td
-					h4 Mini 
-						span $10 / 
-							sup month
-				td
-					h4 Medium 
-						span $20 / 
-							sup month
-				td
-					h4 Advanced 
-						span $30 / 
-							sup month
-			tr.even
-				td.right Lorem ipsum
-				td 1
-				td 5
-				td 20
-				td Unlimited
-			tr
-				td.right Lorem ipsum
-				td 1
-				td 10
-				td 50
-				td Unlimited
-			tr.even
-				td.right Lorem ipsum
-				td
-					span.cross
-				td
-					span.cross
-				td
-					span.check-icon
-				td
-					span.check-icon
-			tr
-				td.right Lorem ipsum
-				td
-					span.cross
-				td
-					span.check-icon
-				td
-					span.check-icon
-				td
-					span.check-icon
-			tr.even
-				td.right Lorem ipsum
-				td
-					span.cross
-				td
-					span.check-icon
-				td
-					span.check-icon
-				td
-					span.check-icon
-			tr
-				td.right Lorem ipsum
-				td
-					span.cross
-				td
-					span.cross
-				td
-					span.cross
-				td
-					span.check-icon
-	// End Table 2
-	
-	// END TABLE CONTENT
+		// Begin Table 2
+		h2 Table 2
+		table
+			tbody
+				tr.border_bottom
+					td 
+						&nbsp;
+					td
+						h4 Free
+					td
+						h4 Mini 
+							span $10 / 
+								sup month
+					td
+						h4 Medium 
+							span $20 / 
+								sup month
+					td
+						h4 Advanced 
+							span $30 / 
+								sup month
+				tr.even
+					td.right Lorem ipsum
+					td 1
+					td 5
+					td 20
+					td Unlimited
+				tr
+					td.right Lorem ipsum
+					td 1
+					td 10
+					td 50
+					td Unlimited
+				tr.even
+					td.right Lorem ipsum
+					td
+						span.cross
+					td
+						span.cross
+					td
+						span.check-icon
+					td
+						span.check-icon
+				tr
+					td.right Lorem ipsum
+					td
+						span.cross
+					td
+						span.check-icon
+					td
+						span.check-icon
+					td
+						span.check-icon
+				tr.even
+					td.right Lorem ipsum
+					td
+						span.cross
+					td
+						span.check-icon
+					td
+						span.check-icon
+					td
+						span.check-icon
+				tr
+					td.right Lorem ipsum
+					td
+						span.cross
+					td
+						span.cross
+					td
+						span.cross
+					td
+						span.check-icon
+		// End Table 2
+		
+		// END TABLE CONTENT
+
+		.clear
+		.line
 
 block footer
 	include ./includes/footer.jade
