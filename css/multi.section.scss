@@ -160,3 +160,20 @@ h1.title {
 @import 'testimonials';
 
 // END TESTIMONIALS
+
+////////////////////////////////////////////
+// 		FEATURES
+////////////////////////////////////////////
+
+// useful to setup classes for some common actions and then just tag the things you want changed as if this was Bootstrap
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+	// font-weight: 900;
+}
+
+// END FEATURES

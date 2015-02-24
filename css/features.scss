@@ -135,4 +135,77 @@ section.featuresTwo {
 	}
 
 	// TABLES
+	
+	& .featuredTable1, & .featuredTable2 {
+		margin: 0;
+		padding: 0;
+		& table {
+			width: 100%;
+			margin-bottom: 5%;
+			border: $tableBorder;
+		}
+		& h2 {
+			font-size: $basefontsize*20/12;
+		}
+		& h4 {
+			margin: 0;
+			font-size: $basefontsize*16/12;
+			line-height: $baselineheight*20/12;
+		}
+		& td {
+			padding: 8px 10px;
+			border-right: $tableBorder;
+			font-size: $basefontsize*13/12;
+			border-top: $tableBorder;
+		}
+	}
+
+	& .featuredTable1 {
+		// & table {
+		// 	width: 100%;
+		// }
+		& th {
+			padding: 10px;
+			text-align: left;
+			padding-left: 10px;
+			border-right: $tableBorder;
+			font-weight: normal;
+			// & h4 {
+			// 	margin: 0;
+			// }
+		}
+		// & td {
+		// 	padding: 8px 10px;
+		// 	border-right: $tableBorder;
+		// 	font-size: $basefontsize*13/12;
+		// 	border-top: $tableBorder;
+		// }
+	}
+
+	& .featuredTable2 {
+		& tr {
+			border-left: $tableBorder;
+			border-top: $tableBorder;
+		}
+		& td {
+			text-align: center;
+			// &:not('.right') {
+			// 	text-align: right;
+			// 	font-weight: 900;
+			// }
+			// 
+			// & .right in here didn't work
+			// & .right {
+			// 	text-align: right;
+			// 	font-weight: 900;
+			// }
+		}
+
+		// had to put & td.right in this position for it to work
+		& td.right {
+			text-align: right;
+			font-weight: 900;
+		}
+	}
+
 }
