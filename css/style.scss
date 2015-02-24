@@ -73,8 +73,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h3 {
-	font-size: $basefontsize*1.5;
-	line-height: $baselineheight*1.83;
+	font-size: $basefontsize*18/12;
+	line-height: $baselineheight*22/12;
+	// font-size: $basefontsize*1.5;
+	// line-height: $baselineheight*1.83;
 }
 
 p {

@@ -23,6 +23,7 @@ $blogPostFontFamily: 'Amaranth', sans-serif;
 $headingFontFamily: 'Amaranth', sans-serif;
 $introTextFamily: 'Droid Sans', sans-serif;
 $sidebarNavFontFamily: 'Amaranth', sans-serif;
+$dropcapFontFamily: 'Amaranth', sans-serif;
 
 // FONT COLOURS
 $altHoverColorOption1: #ab4d63;
@@ -106,6 +107,11 @@ a {
 // primarily used in footer
 .lite1 {
 	color: $lite1Color;
+	border-bottom: $lite1Border;
+}
+
+.lite2 {
+	// color: $lite1Color;
 	border-bottom: $lite1Border;
 }
 

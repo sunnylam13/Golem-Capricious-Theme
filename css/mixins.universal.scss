@@ -198,6 +198,13 @@
 	}
 }
 
+@mixin specialBulletsDotted {
+	// use for the li element
+	// list-style: hiragana inside;
+	background: transparent url(/images/bullet.png) left 8px no-repeat;
+	padding-left: 3%;
+}
+
 ////////////////////////////////////////////
 ///// 		MAIN CODE
 ///////////////////////////////////////////////

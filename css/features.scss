@@ -209,3 +209,76 @@ section.featuresTwo {
 	}
 
 }
+
+////////////////////////////////////////////
+///// 		TYPOGRAPHY PAGE
+///////////////////////////////////////////////
+
+.typographyShowCase {
+	margin: 0;
+	padding: 0;
+	// & .listHoldingCell {
+	// 	// using margin 0 and padding 0 screwed things up within .listHoldingCell
+	// 	// margin: 0;
+	// 	// padding: 0;
+	// }
+
+	& .unorderList {
+		margin-bottom: 3%;
+		& li {
+			@include specialBulletsDotted;
+		}
+	}
+
+	& .orderList {
+		margin-bottom: 3%;
+		& li {
+			list-style-type: decimal;
+		}
+	}
+
+	& blockquote p {
+		@include blockquoteCodeClear;
+	}
+
+	& .dropcap {
+		display: inline-block;
+		float: left;
+		font-size: $basefontsize*45/12;
+		padding: 0;
+		margin: 0;
+		margin:  10px 8px 3px 0;
+		font-family: $dropcapFontFamily;
+	}
+
+	& pre {
+		margin: 5px 0 40px 0px;
+		padding: 0 10px 0 10px; 
+		display: block;
+		clear: both;
+		background: url(/images/codebg.jpg) repeat;
+		line-height: $baselineheight*20/12;
+		font-size: $basefontsize;
+		border: $carouselScrollBorder;
+	}
+
+	& .one-third {
+		padding: 1%;
+	}
+}
+
+// END TYPOGRAPHY PAGE
+
+////////////////////////////////////////////
+// 		SERVICE ICONS PAGE
+////////////////////////////////////////////
+
+.content.one-half h3 img {
+	vertical-align: middle;
+	// margin right often doesn't work
+	// in those cases use padding
+	padding-right: 10px;
+	display: inline;
+}
+
+// END SERVICE ICONS PAGE
