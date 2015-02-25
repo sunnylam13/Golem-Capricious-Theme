@@ -2,20 +2,39 @@
 //- MIXINS
 //- ===================================
 
-mixin portfolioItemBase
-	a(href="#")
+//- mixin portfolioItemBase
+//- 	a(href="#")
+//- 		img(src="http://lorempixel.com/1200/960", alt="Lorem", title='Caption', rel='prettyPhoto [portfolio]')
+//- 	h4
+//- 		a(href='#') Lorem ipsum
+//- 	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+
+//- mixin portfolioItemBase1Col
+//- 	a(href="#")
+//- 		img(src="http://lorempixel.com/1200/960", alt="Lorem", title='Caption', rel='prettyPhoto [portfolio]',class='portImg1Col')
+//- 	h4.portImag1Col
+//- 		a(href='#') Lorem ipsum
+//- 	p.portImag1Col Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
+//- 	a.buttonBlue(href='portfolio5.html') View Project
+
+
+mixin portfolioItemBase(filterName)
+	//- li
+	a(href="#",class='fancybox',data-fancybox-group="gallery",data-filter=filterName)
 		img(src="http://lorempixel.com/1200/960", alt="Lorem", title='Caption', rel='prettyPhoto [portfolio]')
 	h4
 		a(href='#') Lorem ipsum
 	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
 
-mixin portfolioItemBase1Col
-	a(href="#")
+mixin portfolioItemBase1Col(filterName)
+	//- li
+	a(href="#",class='fancybox',data-fancybox-group="gallery",data-filter=filterName)
 		img(src="http://lorempixel.com/1200/960", alt="Lorem", title='Caption', rel='prettyPhoto [portfolio]',class='portImg1Col')
 	h4.portImag1Col
 		a(href='#') Lorem ipsum
 	p.portImag1Col Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, reiciendis.
 	a.buttonBlue(href='portfolio5.html') View Project
+
 
 
 //- you can call a mixin within a mixin to reduce code duplication
@@ -26,19 +45,19 @@ mixin portfolioItemBase1Col
 
 mixin portfolioItemWeb1col
 	.portfolioItem.portWeb.full-monty
-		+portfolioItemBase1Col
+		+portfolioItemBase1Col('web')
 
 mixin portfolioItemPhoto1col
 	.portfolioItem.portPhoto.full-monty
-		+portfolioItemBase1Col
+		+portfolioItemBase1Col('photo')
 
 mixin portfolioItemGraphic1col
 	.portfolioItem.portGraphic.full-monty
-		+portfolioItemBase1Col
+		+portfolioItemBase1Col('graphic')
 
 mixin portfolioItemVideo1col
 	.portfolioItem.portVideo.full-monty
-		+portfolioItemBase1Col
+		+portfolioItemBase1Col('video')
 
 //- ===================================
 //- 2 COLUMN MIXINS
@@ -46,19 +65,19 @@ mixin portfolioItemVideo1col
 
 mixin portfolioItemWeb2col
 	.portfolioItem.portWeb.one-half
-		+portfolioItemBase
+		+portfolioItemBase('web')
 
 mixin portfolioItemPhoto2col
 	.portfolioItem.portPhoto.one-half
-		+portfolioItemBase
+		+portfolioItemBase('photo')
 
 mixin portfolioItemGraphic2col
 	.portfolioItem.portGraphic.one-half
-		+portfolioItemBase
+		+portfolioItemBase('graphic')
 
 mixin portfolioItemVideo2col
 	.portfolioItem.portVideo.one-half
-		+portfolioItemBase
+		+portfolioItemBase('video')
 
 //- ===================================
 //- 3 COLUMN MIXINS
@@ -66,19 +85,19 @@ mixin portfolioItemVideo2col
 
 mixin portfolioItemWeb3col
 	.portfolioItem.portWeb.one-third
-		+portfolioItemBase
+		+portfolioItemBase('web')
 
 mixin portfolioItemPhoto3col
 	.portfolioItem.portPhoto.one-third
-		+portfolioItemBase
+		+portfolioItemBase('photo')
 
 mixin portfolioItemGraphic3col
 	.portfolioItem.portGraphic.one-third
-		+portfolioItemBase
+		+portfolioItemBase('graphic')
 
 mixin portfolioItemVideo3col
 	.portfolioItem.portVideo.one-third
-		+portfolioItemBase
+		+portfolioItemBase('video')
 
 //- ===================================
 //- 4 COLUMN MIXINS
@@ -86,19 +105,19 @@ mixin portfolioItemVideo3col
 
 mixin portfolioItemWeb4col
 	.portfolioItem.portWeb.one-fourth
-		+portfolioItemBase
+		+portfolioItemBase('web')
 
 mixin portfolioItemPhoto4col
 	.portfolioItem.portPhoto.one-fourth
-		+portfolioItemBase
+		+portfolioItemBase('photo')
 
 mixin portfolioItemGraphic4col
 	.portfolioItem.portGraphic.one-fourth
-		+portfolioItemBase
+		+portfolioItemBase('graphic')
 
 mixin portfolioItemVideo4col
 	.portfolioItem.portVideo.one-fourth
-		+portfolioItemBase
+		+portfolioItemBase('video')
 
 //- ===================================
 
@@ -108,17 +127,19 @@ mixin portfolioItemVideo4col
 
 .portfolioWork
 	block filterNav
-		ul.filtering-nav
+		ul.filtering-nav#galleryTab
 			li Filter:
 			li
-				a(href="#") All
+				a(href="javascript:;",class='all filter active',data-rel="all") All
 			li
-				a(href="#") Web
+				a(href="javascript:;",class='web',data-rel="web") Web
 			li
-				a(href="#") Photo
+				a(href="javascript:;",class='photo',data-rel="photo") Photo
 			li
-				a(href="#") Graphic
-	
+				a(href="javascript:;",class='graphic',data-rel="graphic") Graphic
+			li
+				a(href="javascript:;",class='video',data-rel="video") Video
+
 	//- create a kind of dividing div
 	.clear
 
