@@ -48,7 +48,7 @@
 	// where $direction is either left or right for the direction of the arrow
 	// we assume the background image is always the same
 	float: $arrowDirection;
-	background: #fff url(/images/controls.png) no-repeat $arrowDirection top;
+	background: #fff url(../images/controls.png) no-repeat $arrowDirection top;
 	display: block;
 	cursor: pointer;
 	width: 25px;
@@ -62,7 +62,7 @@
 	font-family: $headingFontFamily;
 	border-radius: 3px;
 	text-align: center;
-	background: #fff url(/images/button.png) repeat-x left top;
+	background: #fff url(../images/button.png) repeat-x left top;
 	padding: 0 20px 0 20px;
 	line-height: $baselineheight*26/12;
 	height: 26px;
@@ -201,7 +201,7 @@
 @mixin specialBulletsDotted {
 	// use for the li element
 	// list-style: hiragana inside;
-	background: transparent url(/images/bullet.png) left 8px no-repeat;
+	background: transparent url(../images/bullet.png) left 8px no-repeat;
 	padding-left: 3%;
 }
 

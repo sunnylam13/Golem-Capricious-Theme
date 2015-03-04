@@ -21,12 +21,33 @@ jQuery(document).ready(function($) {
 
 // END FACEBOOK COMMENTS FOR POSTS
 
-function checkIfActiveClass () {
-  if (!$this.hasClass('active')) {
-    $('.filter').removeClass('active');
-    $this.addClass('active');
-  }
+function checkIfActiveClass (thisEntry) {
+  // $activeList = $('a.filter').value();
+  // // $.each($activeList, function(index, val) {
+  // //   if (val='active') {
+  // //     $this.
+  // //   }
+  // // });
+  // $this.addClass('active');
+  $('ul.filtering-nav li a.filter').each(function(index, el) {
+    if (thisEntry.is('.active')) {
+      thisEntry.removeClass('active');
+    };
+  });
 }
+
+// Use return false to break out of each() loops early
+// $('button.ex4').click(function(event) {
+//   $('div.ex4').each(function(index, el) {
+//     // element == this
+//     $(this).css('backgroundColor', 'yellow');
+
+//     if ($(this).is('#stop')) {
+//       $('span').text("Stopped at div index #" + index);
+//       return false; // this breaks the loop once we find the correct span
+//     };
+//   });
+// });
 
 //////////////////////////////////////////////////
 // EXECUTION CODE
@@ -107,12 +128,12 @@ $('.bxsliderLW').bxSlider({
 // }); // on
 
 $("a.all").on('click', function() {
-  // if (!$this.hasClass('active')) {
-  //   $('.filter').removeClass('active');
-  //   $this.addClass('active');
+  // if (!$(this).hasClass('active')) {
+  //   // $('a.filter').removeClass('active');
+  //   $(this).addClass('active');
   // }
-  // $('a.filter').removeClass('active');
-  // $this.addClass('active');
+  // checkIfActiveClass($(this));
+  $(this).toggleClass('active');
   $('.portWeb').show("fast");
   $('.portPhoto').show("fast");
   $('.portGraphic').show("fast");
@@ -124,6 +145,8 @@ $("a.web").on('click', function() {
   //   $('.filter').removeClass('active');
   //   $this.addClass('active');
   // }
+  // checkIfActiveClass($(this));
+  $(this).toggleClass('.active');
   $('.portWeb').show("fast");
   $('.portPhoto').hide("fast");
   $('.portGraphic').hide("fast");
@@ -135,6 +158,8 @@ $("a.photo").on('click', function() {
   //   $('.filter').removeClass('active');
   //   $this.addClass('active');
   // }
+  // checkIfActiveClass($(this));
+  $(this).toggleClass('active');
   $('.portWeb').hide("fast");
   $('.portPhoto').show("fast");
   $('.portGraphic').hide("fast");
@@ -146,6 +171,8 @@ $("a.graphic").on('click', function() {
   //   $('.filter').removeClass('active');
   //   $this.addClass('active');
   // }
+  // checkIfActiveClass($(this));
+  $(this).toggleClass('active');
   $('.portWeb').hide("fast");
   $('.portPhoto').hide("fast");
   $('.portGraphic').show("fast");
@@ -157,6 +184,8 @@ $("a.video").on('click', function() {
   //   $('.filter').removeClass('active');
   //   $this.addClass('active');
   // }
+  // checkIfActiveClass($(this));
+  $(this).toggleClass('active');
   $('.portWeb').hide("fast");
   $('.portPhoto').hide("fast");
   $('.portGraphic').hide("fast");
@@ -165,6 +194,10 @@ $("a.video").on('click', function() {
 
 
 // END PORTFOLIO FILTER
+
+// $('a.filter').each(function(index, val) {
+//   console.log(index,val);
+// });
 
 //////////////////////////////////////////////////
 

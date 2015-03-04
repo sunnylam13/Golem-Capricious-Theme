@@ -66,7 +66,7 @@ $tableBorder: 1px solid #dedede;
 
 // HORIZONTAL LINES
 // these use the background selector
-$horizontalLine: transparent url(/images/line.png) repeat-x;
+$horizontalLine: transparent url(../images/line.png) repeat-x;
 // NOTE:  make sure the URL is correct otherwise you don't see a thing
 
 // PADDING
@@ -83,7 +83,7 @@ $sidebarNavPadding: 8% 4% 8% 4%;
 	color: $blockquoteColor;
 	line-height: $baselineheight*24/12;
 	padding-left: 30px;
-	background: transparent url(/images/quote.png) no-repeat left 7px;
+	background: transparent url(../images/quote.png) no-repeat left 7px;
 }
 
 @mixin blockquoteCodeClear {
@@ -93,7 +93,7 @@ $sidebarNavPadding: 8% 4% 8% 4%;
 	color: $blockquoteColor;
 	line-height: $baselineheight*24/12;
 	padding-left: 30px;
-	background: transparent url(/images/quote.png) no-repeat left 7px;
+	background: transparent url(../images/quote.png) no-repeat left 7px;
 }
 
 
