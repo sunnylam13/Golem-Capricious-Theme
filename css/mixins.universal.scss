@@ -21,8 +21,6 @@
 	width: 100%;
 	display: none;
 	position: absolute;
-	// left: 89%;
-	// top: 16%;
 	left: $left;
 	top: $top;
 	border:1px solid $sidebarBorderColor;
@@ -89,7 +87,7 @@
 		clear:both;
 	}
 
-	// for the dividing line div to work you must first use div.clear (above) first... otherwise the div gets stuck within another element or div
+	// for the dividing line div to work you must first use div.clear (above)... otherwise the div gets stuck within another element or div
 
 	.line {
 		background: $horizontalLine;
@@ -112,8 +110,6 @@
 	font-family: $blogPostFontFamily;
 	font-size: $basefontsize;
 	float: left;
-	// display: inline-block;
-	// padding-left: 2.5%;
 	// setting the line height to 1 allows us to align the text with the central axis of the icons they're beside
 	line-height: 1;
 	padding-right: 5px;
@@ -159,11 +155,6 @@
 // this mixin is used for the portfolio navigation buttons
 // also used for the Tabs, Toggle and Tables page
 @mixin standardButtonNav {
-	// & li:first-child {
-	// 	text-transform: uppercase;
-	// 	font-size: $basefontsize;
-	// 	font-family: $headingFontFamily;
-	// }
 	& li {
 		list-style: none;
 		display: list-item;
@@ -177,9 +168,6 @@
 			@include portfolioButtonsV1;
 		}
 	}
-	// & li a {
-	// 	@include portfolioButtonsV1;
-	// }
 }
 
 @mixin tabToggleContent {

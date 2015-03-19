@@ -22,17 +22,6 @@
 // 		MAIN CODE
 ////////////////////////////////////////////
 
-.copyBlockOne {
-	// & h3 {
-	// 	font-size: $basefontsize*1.5;
-	// 	line-height: $baselineheight*1.83;
-	// }
-	// & p {
-	// 	line-height: $baselineheight*1.66;
-	// 	margin-bottom: 20px;
-	// }
-}
-
 .bulletBlock {
 	& h3 img {
 		margin-right: 5%;
@@ -42,9 +31,5 @@
 .endingBlock {
 	& li {
 		@include specialBulletsDotted;
-	}
-	& ul > li > p {
-		// padding-left: 3%;
-
 	}
 }

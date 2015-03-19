@@ -161,25 +161,13 @@ section.featuresTwo {
 	}
 
 	& .featuredTable1 {
-		// & table {
-		// 	width: 100%;
-		// }
 		& th {
 			padding: 10px;
 			text-align: left;
 			padding-left: 10px;
 			border-right: $tableBorder;
 			font-weight: normal;
-			// & h4 {
-			// 	margin: 0;
-			// }
 		}
-		// & td {
-		// 	padding: 8px 10px;
-		// 	border-right: $tableBorder;
-		// 	font-size: $basefontsize*13/12;
-		// 	border-top: $tableBorder;
-		// }
 	}
 
 	& .featuredTable2 {
@@ -189,16 +177,6 @@ section.featuresTwo {
 		}
 		& td {
 			text-align: center;
-			// &:not('.right') {
-			// 	text-align: right;
-			// 	font-weight: 900;
-			// }
-			// 
-			// & .right in here didn't work
-			// & .right {
-			// 	text-align: right;
-			// 	font-weight: 900;
-			// }
 		}
 
 		// had to put & td.right in this position for it to work
@@ -239,12 +217,7 @@ section.featuresTwo {
 .typographyShowCase {
 	margin: 0;
 	padding: 0;
-	// & .listHoldingCell {
-	// 	// using margin 0 and padding 0 screwed things up within .listHoldingCell
-	// 	// margin: 0;
-	// 	// padding: 0;
-	// }
-
+	
 	& .unorderList {
 		margin-bottom: 3%;
 		& li {

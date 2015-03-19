@@ -124,24 +124,9 @@ h1.title {
 	width: 60px;
 	& .prev {
 		@include directionButtons(left);
-		// float: left;
-		// background: #fff url(/images/controls.png) no-repeat left top;
-		// display: block;
-		// cursor: pointer;
-		// width: 25px;
-		// height: 25px;
-		// border: $carouselScrollBorder;
 	}
 	& .next {
 		@include directionButtons(right);
-		// float: right;
-		// margin-left: 5px;
-		// background: #fff url(/images/controls.png) no-repeat right top;
-		// display: block;
-		// cursor: pointer;
-		// width: 25px;
-		// height: 25px;
-		// border: $carouselScrollBorder;
 	}
 	& span {
 		& .fa-angle-left, .fa-angle-right {
@@ -174,7 +159,6 @@ h1.title {
 
 .right {
 	text-align: right;
-	// font-weight: 900;
 }
 
 // END FEATURES

@@ -36,14 +36,10 @@ ul.filtering-nav {
 		display: inline-block;
 		// to adjust the margins/spacing between the porfolio nav buttons I had to apply the margin changes to the li not the "a" this time
 		margin-left: 1%;
-		// margin-right: 2%;
 		& a {
 			@include portfolioButtonsV1;
 		}
 	}
-	// & li a {
-	// 	@include portfolioButtonsV1;
-	// }
 }
 
 .portfolioList {
