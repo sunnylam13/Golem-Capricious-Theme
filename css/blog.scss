@@ -28,11 +28,17 @@
 		// margin: 0 auto;
 		margin-bottom: 2.5%;
 		max-width: 75%;
+		@include tabletR {
+			margin-bottom: 5%;
+		}
 	}
 	& .info {
 		display: block;
 		@include column(12);
 		margin-bottom: 3%;
+		@include tabletR {
+			margin-bottom: 6%;
+		}
 	}
 	& .date {
 		background: $blogDateBack;
@@ -63,6 +69,7 @@
 	}
 	& .meta {
 		display: block;
+
 		& h3.title a {
 			color: $blogHeadlineColor;
 		}
@@ -70,10 +77,13 @@
 			& a {
 				@include blogMetaDataFormat;
 				padding-left: 3.5%;
+				background: transparent url(/images/icon-comment.png) no-repeat left top;
+				@include tabletR {
+					padding-left: 6.5%;
+				}
 				&:hover {
 					color: $baseHoverColor;
 				}
-				background: transparent url(/images/icon-comment.png) no-repeat left top;
 			}
 		}
 		& .tags {
@@ -87,6 +97,9 @@
 					margin-left: 2%;
 					padding-left: 3.5%;
 					background: transparent url(/images/icon-cat.png) no-repeat left top;
+					@include tabletR {
+						padding-left: 6.5%;
+					}
 				}
 			}
 		}
@@ -120,10 +133,16 @@
 
 .primary {
 	@include column(8);
+	@include phoneR {
+		@include column(12);
+	}
 }
 
 .secondary {
 	@include column(4);
+	@include phoneR {
+		@include column(12);
+	}
 	border-left: $carouselScrollBorder;
 	padding-left: 2%;
 }
@@ -175,6 +194,11 @@
 
 .pageNavigation {
 	margin-bottom: 8%;
+
+	@include phabletR {
+		margin-bottom: 15%;
+	}
+
 	& ul {
 		margin: 0;
 		position: 0;

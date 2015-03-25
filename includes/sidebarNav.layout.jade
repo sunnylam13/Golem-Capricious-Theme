@@ -1,3 +1,126 @@
+//- ===================================
+//- 		VARIABLES
+//- ===================================
+
+
+
+//- END VARIABLES
+
+//- ===================================
+//- 		MIXINS
+//- ===================================
+
+mixin logoSetupV1
+	.logo
+		img(src="./images/logo.png", alt="logo")
+
+mixin navMenuV1
+	ul.mainMenu
+		li
+			a(href="index.html") Home
+			ul.subMenuMain.subMenu1
+				li
+					a(href="index.html") Home w/ Carousel
+				li
+					a(href="index2.html") Home w/ Portfolio
+				li
+					a(href="index3.html") Home w/ Testimonials
+		li
+			a(href="portfolio.html") Portfolio
+			ul.subMenuMain.subMenu2
+				li
+					a(href="portfolio.html") Portfolio 4 Columns
+				li
+					a(href="portfolio2.html") Portfolio 3 Columns
+				li
+					a(href="portfolio3.html") Portfolio 2 Columns
+				li
+					a(href="portfolio4.html") Portfolio 1 Columns
+				li
+					a(href="portfolio5.html") Portfolio Post
+		li
+			a(href="blog.html") Blog
+			ul.subMenuMain.subMenu3
+				li
+					a(href="blog.html") Blog
+				li
+					a(href="blog2.html") Blog with Sidebar
+				li
+					a(href="post.html") Post
+				li
+					a(href="post2.html") Post with Sidebar
+		li
+			a(href="buttons-boxes-images.html") Features
+			ul.subMenuMain.subMenu4
+				li
+					a(href="buttons-boxes-images.html") Button Boxes Images
+				li
+					a(href="tabs-toggles-tables.html") Tabs Toggles Tables
+				li
+					a(href="testimonials.html") Testimonials
+				li
+					a(href="typography.html") Typography
+				li
+					a(href="service-icons.html") Service Icons
+		li
+			a(href="contact.html") Contact Us
+
+mixin socialIconsV1
+	//- Notice that all of these are designed using lists.
+
+	.socialMediaIcons
+		ul
+			li
+				a(href="#")
+					img(src="./images/icon-rss.png", alt="RSS")
+			li
+				a(href="#")
+					img(src="./images/icon-facebook.png", alt="Facebook")
+			li
+				a(href="#")
+					img(src="./images/icon-twitter.png", alt="Twitter")
+			li
+				a(href="#")
+					img(src="./images/icon-dribbble.png", alt="Dribble")
+			li
+				a(href="#")
+					img(src="./images/icon-linkedin.png", alt="LinkedIn")
+
+
+mixin socialIconsV2
+	//- Notice that all of these are designed using lists.
+
+	.socialMediaIcons.flex-container
+		ul
+			li
+				a(href="#")
+					img(src="./images/icon-rss.png", alt="RSS")
+			li
+				a(href="#")
+					img(src="./images/icon-facebook.png", alt="Facebook")
+			li
+				a(href="#")
+					img(src="./images/icon-twitter.png", alt="Twitter")
+			li
+				a(href="#")
+					img(src="./images/icon-dribbble.png", alt="Dribble")
+			li
+				a(href="#")
+					img(src="./images/icon-linkedin.png", alt="LinkedIn")
+
+mixin navMenuToggleV1
+	input(name='toggle',type='checkbox')#toggle
+
+mixin navMenuToggleIconV1
+	label(for='toggle')
+		span.fa.fa-navicon.animated.rollIn  Menu
+
+//- END MIXINS
+
+//- ===================================
+//- 		MAIN CODE
+//- ===================================
+
 .sidebarNav
 
 	//- ===================================
@@ -5,63 +128,14 @@
 	//- ===================================
 
 	block logoArea
-		.logo
-			img(src="./images/logo.png", alt="logo")
+		+logoSetupV1
 	
 	//- ===================================
 	//- NAV MENU
 	//- ===================================
 
 	block navMenu
-		ul.mainMenu
-			li
-				a(href="index.html") Home
-				ul.subMenuMain.subMenu1
-					li
-						a(href="index.html") Home w/ Carousel
-					li
-						a(href="index2.html") Home w/ Portfolio
-					li
-						a(href="index3.html") Home w/ Testimonials
-			li
-				a(href="portfolio.html") Portfolio
-				ul.subMenuMain.subMenu2
-					li
-						a(href="portfolio.html") Portfolio 4 Columns
-					li
-						a(href="portfolio2.html") Portfolio 3 Columns
-					li
-						a(href="portfolio3.html") Portfolio 2 Columns
-					li
-						a(href="portfolio4.html") Portfolio 1 Columns
-					li
-						a(href="portfolio5.html") Portfolio Post
-			li
-				a(href="blog.html") Blog
-				ul.subMenuMain.subMenu3
-					li
-						a(href="blog.html") Blog
-					li
-						a(href="blog2.html") Blog with Sidebar
-					li
-						a(href="post.html") Post
-					li
-						a(href="post2.html") Post with Sidebar
-			li
-				a(href="buttons-boxes-images.html") Features
-				ul.subMenuMain.subMenu4
-					li
-						a(href="buttons-boxes-images.html") Button Boxes Images
-					li
-						a(href="tabs-toggles-tables.html") Tabs Toggles Tables
-					li
-						a(href="testimonials.html") Testimonials
-					li
-						a(href="typography.html") Typography
-					li
-						a(href="service-icons.html") Service Icons
-			li
-				a(href="contact.html") Contact Us
+		+navMenuV1
 	
 	//- ===================================
 	//- SOCIAL MEDIA BUTTONS
@@ -72,25 +146,7 @@
 		// SOCIAL MEDIA BUTTONS
 		// ===================================
 
-		//- Notice that all of these are designed using lists.
-
-		.socialMediaIcons
-			ul
-				li
-					a(href="#")
-						img(src="./images/icon-rss.png", alt="RSS")
-				li
-					a(href="#")
-						img(src="./images/icon-facebook.png", alt="Facebook")
-				li
-					a(href="#")
-						img(src="./images/icon-twitter.png", alt="Twitter")
-				li
-					a(href="#")
-						img(src="./images/icon-dribbble.png", alt="Dribble")
-				li
-					a(href="#")
-						img(src="./images/icon-linkedin.png", alt="LinkedIn")
+		+socialIconsV1
 			
 		// SOCIAL MEDIA BUTTONS END
 	
@@ -101,3 +157,7 @@
 	block blogSearchBox
 		.blogSearchBox
 			//- This should be hidden with 
+
+//- END MAIN CODE
+
+

@@ -1,3 +1,17 @@
+
+//- ===================================
+//- 		MIXINS
+//- ===================================
+
+mixin navMenuToggleV1
+	input(name='toggle',type='checkbox')#toggle
+
+mixin navMenuToggleIconV1
+	label(for='toggle')
+		span.fa.fa-navicon.animated.rollIn  Menu
+
+//- END MIXINS
+
 html(lang="en")
 	head
 		include ./includes/meta.jade
@@ -8,9 +22,14 @@ html(lang="en")
 				| Golem Capricious
 	body
 		#fb-root
-		// This theme is inspired by and partly derived from Caprice (http://elemisdesign.com/demos/caprice/index.html)...
+		// This theme is a re-code variation of Caprice (http://elemisdesign.com/demos/caprice/index.html)...
 		
 		.wrapper
+
+			//- input(name='toggle',type='checkbox')#toggle
+
+			block navmenu
+
 			//- ===================================
 			//- SIDEBAR NAV
 			//- ===================================

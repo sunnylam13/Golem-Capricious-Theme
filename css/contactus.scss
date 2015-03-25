@@ -27,6 +27,8 @@
 	padding: 0;
 	& iframe {
 		margin-bottom: 3%;
+		// need to make sure the iframe doesn't stretch past the right edge of screen
+		max-width: 100%;
 	}
 }
 

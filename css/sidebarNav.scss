@@ -14,7 +14,7 @@
 		padding:0;
 	}
 	& li {
-		background: transparent url(/images/menu-line.png) no-repeat center top;
+		background: transparent url(../images/menu-line.png) no-repeat center top;
 	}
 	& a {
 		display: block;
@@ -73,6 +73,13 @@
 	& .logo {
 		// padding-left: 15%;
 		text-align: center;
+		& img {
+			@include tabletR {
+				// keep the image within the sidebar bounds
+				max-width: 100%;
+			}
+		}
+		
 	}
 
 	////////////////////////////////////////////
@@ -87,8 +94,15 @@
 			& i.fa {
 				color: $sidebarNavFontColor;
 				position: absolute;
-				right: 11px;
-				top: 9px;
+				// right: 11px;
+				// top: 9px;
+				// change from pixels to % because the positioning is off as the screen shrinks
+				right: 5%;
+				top: 30%;
+				@include tabletR {
+					// field is so small you're better off getting rid of the magnifying glass
+					display: none;
+				}
 			}
 		}
 		& h3 {
@@ -155,4 +169,19 @@
 		// display: block;
 	}
 	////////////////////////////////////////////
+	
+	////////////////////////////////////////////
+	///// 		FLEXBOX
+	///////////////////////////////////////////////
+	
+	.flex-container {
+		display: flex;
+
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	
+	///////////////////////////////////////////////
+
 }

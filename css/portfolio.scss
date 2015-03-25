@@ -23,6 +23,8 @@
 ////////////////////////////////////////////
 
 ul.filtering-nav {
+	// need some margin to push the .line down
+	margin-bottom: 3%;
 	& li:first-child {
 		text-transform: uppercase;
 		font-size: $basefontsize;
