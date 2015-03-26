@@ -55,7 +55,10 @@
 				// get rid of the line background image here
 				background: none;
 				padding: 0;
-				padding-right: 3px;
+				// padding-right: 3px;
+				@include phoneLandR {
+					padding-right: 0px;
+				}
 			}
 			& a:hover {
 				background: $sidebarNavBack;
@@ -159,7 +162,7 @@
 	& .subMenu2 {
 		@include subMenuBasic(100%,29.4%);
 		@include phoneR {
-			@include subMenuBasic(100%,-27.6%);
+			@include subMenuBasic(100%,2.4%);
 		}
 	}
 	& .subMenu3 {
