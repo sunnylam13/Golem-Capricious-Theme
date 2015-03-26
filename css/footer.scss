@@ -70,5 +70,8 @@
 }
 
 .footer.content .one-third {
-	@include column(12);
+	@include phoneR {
+		@include column(12);
+	}
+	
 }

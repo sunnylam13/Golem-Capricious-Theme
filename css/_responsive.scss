@@ -13,6 +13,12 @@
 	}
 }
 
+@mixin phoneLandR {
+	@media (max-width: 480px) and (orientation: landscape) {
+		@content;
+	}
+}
+
 @mixin phabletR {
 	// Landscape phone to portrait tablet
 	@media (max-width: 720px) {
@@ -20,9 +26,21 @@
 	}
 }
 
+@mixin phabletLandR {
+	@media (max-width: 720px) and (orientation: landscape) {
+		@content;
+	}
+}
+
 @mixin tabletR {
 	// Landscape phone to portrait tablet
 	@media (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin tabletLandR {
+	@media (max-width: 768px) and (orientation: landscape) {
 		@content;
 	}
 }

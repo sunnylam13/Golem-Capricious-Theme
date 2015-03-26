@@ -12,7 +12,7 @@
 	@include transitionEffectAllEaseIn(0.9s);
 	@include phoneR {
 		left: -50%;
-		@include column(6);
+		@include column(5);
 	}
 	& ul {
 		margin:0;
@@ -28,6 +28,9 @@
 		font-family: $sidebarNavFontFamily;
 		padding: $sidebarNavPadding;
 		@include transitionEffectAll(0.5s);
+		@include phoneLandR {
+			font-size: $basefontsize*1.2;
+		}
 		&:link {
 			color: $sidebarNavFontColor;
 		}
@@ -42,6 +45,9 @@
 	& .socialMediaIcons {
 		padding-top: 20%;
 		margin-bottom: 20%;
+		@include phoneLandR {
+			padding-top: 1%;
+		}
 		& ul {
 			text-align: center;
 			& li {
@@ -86,6 +92,9 @@
 			@include tabletR {
 				// keep the image within the sidebar bounds
 				max-width: 100%;
+			}
+			@include phoneLandR {
+				max-width: 50%;
 			}
 		}
 		
@@ -143,39 +152,27 @@
 	/// seems kind of useful styling each menu separately especially when positioning
 	& .subMenu1 {
 		@include subMenuBasic(100%,12%);
-		// left: 89%;
-		// top: 16%;
-		// left: 100%;
-		// top: 12%;
-		// simply add display: block to make this element visible and edit
-		// display: block;
+		@include phoneR {
+			@include subMenuBasic(100%,1%);
+		}
 	}
 	& .subMenu2 {
 		@include subMenuBasic(100%,29.4%);
-		// left: 89%;
-		// top: 22.4%;
-		// left: 100%;
-		// top: 29.4%;
-		// simply add display: block to make this element visible and edit
-		// display: block;
+		@include phoneR {
+			@include subMenuBasic(100%,-27.6%);
+		}
 	}
 	& .subMenu3 {
 		@include subMenuBasic(100%,47%);
-		// left: 89%;
-		// top: 29%;
-		// left: 100%;
-		// top: 47%;
-		// simply add display: block to make this element visible and edit
-		// display: block;
+		@include phoneR {
+			@include subMenuBasic(100%,-12%);
+		}
 	}
 	& .subMenu4 {
 		@include subMenuBasic(100%,65%);
-		// left: 89%;
-		// top: 35%;
-		// left: 100%;
-		// top: 65%;
-		// simply add display: block to make this element visible and edit
-		// display: block;
+		@include phoneR {
+			@include subMenuBasic(100%,-10%);
+		}
 	}
 	////////////////////////////////////////////
 	
