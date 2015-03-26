@@ -4,6 +4,7 @@
 //- ===================================
 
 mixin navMenuToggleV1
+	//- This must be placed just before .sidebarNav and no other element can be between them
 	input(name='toggle',type='checkbox')#toggle
 
 mixin navMenuToggleIconV1
@@ -29,6 +30,8 @@ html(lang="en")
 			//- input(name='toggle',type='checkbox')#toggle
 
 			block navmenu
+				+navMenuToggleIconV1
+				+navMenuToggleV1
 
 			//- ===================================
 			//- SIDEBAR NAV

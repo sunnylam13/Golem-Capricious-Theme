@@ -1,7 +1,16 @@
+
+mixin fbCommentsSetV1
+	.fb-comments(data-href="http://developers.facebook.com/docs/plugins/comments/", data-numposts="5", data-colorscheme="light")
+
+mixin fbCommentsSetV2
+	.fbBoxHolder
+		.fb-comments(data-href="http://developers.facebook.com/docs/plugins/comments/", data-numposts="5", data-colorscheme="light")
+
 ////////////////////////////////////////////
 // 		FACEBOOK COMMENTS API PLUGIN
 ////////////////////////////////////////////
 //- You may want to find a way to adjust the width using CSS later
-.fb-comments(data-href="http://developers.facebook.com/docs/plugins/comments/", data-numposts="5", data-colorscheme="light")
+//- +fbCommentsSetV1
++fbCommentsSetV2
 
 // END FACEBOOK COMMENTS API PLUGIN

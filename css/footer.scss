@@ -69,3 +69,6 @@
 	}
 }
 
+.footer.content .one-third {
+	@include column(12);
+}

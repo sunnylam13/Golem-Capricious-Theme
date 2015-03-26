@@ -12,6 +12,7 @@
 // 		VARIABLES
 ////////////////////////////////////////////
 
+$contentLeftShift: 27%;
 
 ////////////////////////////////////////////
 ///// 		MIXINS
@@ -79,11 +80,17 @@ h1.title {
 .content {
 	position: relative;
 	z-index: 10;
-	left: 27%;
+	left: $contentLeftShift;
 	padding-top: 3%;
 	padding-right: 10%;
 	// for a perfect fit use column(9.5) however 10 provides more space
 	@include column(10);
+	@include phoneR {
+		left: $contentLeftShift/5.09;
+		// left: normal;
+		// margin: 0 auto;
+		@include column(12);
+	}
 }
 
 ////////////////////////////////////////////

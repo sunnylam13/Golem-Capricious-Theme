@@ -278,4 +278,8 @@ section.featuresTwo {
 	border-radius: 3px;
 }
 
+.serviceIconsPage .one-half {
+	@include column(12);
+}
+
 // END SERVICE ICONS PAGE

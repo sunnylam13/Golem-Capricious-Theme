@@ -1,14 +1,19 @@
 .sidebarNav {
-	position: relative;
-	z-index: 4000;
+	// position: relative;
 	background: $sidebarNavBack;
 	@include column(2.5);
 	float: left;
 	height: 100%;
 	position: fixed;
+	z-index: 999;
 	padding: 2% 2% 2% 2%;
 	border-left: $sidebarBorderColor;
 	border-right: $sidebarBorderColor;
+	@include transitionEffectAllEaseIn(0.9s);
+	@include phoneR {
+		left: -50%;
+		@include column(6);
+	}
 	& ul {
 		margin:0;
 		padding:0;
@@ -38,7 +43,7 @@
 		padding-top: 20%;
 		margin-bottom: 20%;
 		& ul {
-			text-align: left;
+			text-align: center;
 			& li {
 				display: inline-block;
 				// get rid of the line background image here
@@ -56,7 +61,10 @@
 		// bx slider's z-index is set to 2000; you have to exceed that value
 		position: relative;
 		overflow: visible;
-		z-index: 4000;
+		z-index: 999;
+		@include phoneR {
+			padding-top: 2%;
+		}
 		& ul.subMenuMain {
 			// @include transitionEffectAll(2s);
 		}
@@ -74,6 +82,7 @@
 		// padding-left: 15%;
 		text-align: center;
 		& img {
+			max-width: 100%;
 			@include tabletR {
 				// keep the image within the sidebar bounds
 				max-width: 100%;

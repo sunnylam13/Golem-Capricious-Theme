@@ -121,24 +121,49 @@ mixin portfolioItemVideo4col
 
 //- ===================================
 
+mixin filterNavV1
+	ul.filtering-nav#galleryTab
+		li Filter:
+		li
+			a(href="javascript:;",class='all filter active',data-rel="all") All
+		li
+			a(href="javascript:;",class='web',data-rel="web") Web
+		li
+			a(href="javascript:;",class='photo',data-rel="photo") Photo
+		li
+			a(href="javascript:;",class='graphic',data-rel="graphic") Graphic
+		li
+			a(href="javascript:;",class='video',data-rel="video") Video
+
+mixin filterNavV2
+	//- this is the flexbox version
+	ul.filtering-nav#galleryTab.flex-container
+		li Filter:
+		li
+			a(href="javascript:;",class='all filter active',data-rel="all") All
+		li
+			a(href="javascript:;",class='web',data-rel="web") Web
+		li
+			a(href="javascript:;",class='photo',data-rel="photo") Photo
+		li
+			a(href="javascript:;",class='graphic',data-rel="graphic") Graphic
+		li
+			a(href="javascript:;",class='video',data-rel="video") Video
+
+//- ===================================
+//- END MIXINS
+//- ===================================
+
+
+
 //- ===================================
 //- MAIN CODE
 //- ===================================
 
 .portfolioWork
 	block filterNav
-		ul.filtering-nav#galleryTab
-			li Filter:
-			li
-				a(href="javascript:;",class='all filter active',data-rel="all") All
-			li
-				a(href="javascript:;",class='web',data-rel="web") Web
-			li
-				a(href="javascript:;",class='photo',data-rel="photo") Photo
-			li
-				a(href="javascript:;",class='graphic',data-rel="graphic") Graphic
-			li
-				a(href="javascript:;",class='video',data-rel="video") Video
+		//- +filterNavV1
+		+filterNavV2
 
 	//- create a kind of dividing div
 	.clear

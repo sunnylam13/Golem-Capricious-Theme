@@ -26,6 +26,11 @@
 	& h3 img {
 		margin-right: 5%;
 	}
+	& .one-half {
+		@include phoneR {
+			@include column(12);
+		}
+	}
 }
 
 .endingBlock {

@@ -29,6 +29,7 @@ ul.filtering-nav {
 		text-transform: uppercase;
 		font-size: $basefontsize;
 		font-family: $headingFontFamily;
+		line-height: $baselineheight*2;
 	}
 	& li {
 		list-style: none;
@@ -41,6 +42,10 @@ ul.filtering-nav {
 		& a {
 			@include portfolioButtonsV1;
 		}
+	}
+	&.flex-container {
+		display: flex;
+		flex-flow: row wrap;
 	}
 }
 
